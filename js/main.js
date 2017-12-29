@@ -13,6 +13,8 @@ const openPage = (target) => {
 			document.querySelector(`#${page}`).style.display = "none";
 		}
 	})
+
+	document.body.scrollTop = 0;
 }
 
 window.addEventListener("hashchange", () => {
