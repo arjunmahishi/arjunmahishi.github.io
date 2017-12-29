@@ -3,6 +3,9 @@ body{
 	color: #fff;
 	font-family: monospace;
 }
+a:link, a:active, a:visited{
+	color: #4CAF50;
+}
 .section{
 	width: 100%;
 }
@@ -17,5 +20,12 @@ body{
     margin-top: 3rem;
 }
 .btn{
-	margin: 1rem;
+    margin: 1rem;
+    border-style: dashed;
+    border-color: #4caf50;
+    color: #4CAF50;
+    background-color: #000;
+    font-size: 1rem;
+    padding: 15px;
+    font-family: monospace;
 }
