@@ -52,6 +52,14 @@ setInterval(() => {
 fetch("projects.json").then((response) => {
 	response.json().then(data => {
 		data.projects.map(project => {
+
+			let github = "";
+
+			if(project.github) github = `
+			<a href="${project.github}" target="_blank">
+		        <button class="btn">Github link</button>
+		    </a>`;
+
 			let card = `
 			<div class="card">
 			    <div class="card-title">${project.name}</div>
@@ -59,6 +67,7 @@ fetch("projects.json").then((response) => {
 			    <a href="${project.link}" target="_blank">
 			        <button class="btn">${project.linkType}</button>
 			    </a>
+			    ${github}
 			</div>`;
 
 			document.querySelector(".pro-list").innerHTML += card;
@@ -67,3 +76,21 @@ fetch("projects.json").then((response) => {
 })
 
 //// Publications updater ////
+
+fetch("publications.json").then((response) => {
+	response.json().then(data => {
+		data.posts.map(post => {
+			let card = `
+			<div class="card">
+			    <div class="card-title">${post.name}</div>
+			    <p>Hosted on: <a href="${post.hostLink}" target="_blank">${post.host}</a></p>
+			    <p>${post.description}</p>
+			    <a href="${post.link}" target="_blank">
+			        <button class="btn">Read post</button>
+			    </a>
+			</div>`;
+
+			document.querySelector(".pub-list").innerHTML += card;
+		})
+	})
+})

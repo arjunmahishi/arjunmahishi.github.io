@@ -1,0 +1,25 @@
+{
+	"posts": [
+		{
+			"name": "Real-time search using basic JavaScript",
+			"description": "A step-by-step guide on how to implement real-time search filtering in a website using basic vanilla javaScript.",
+			"link": "https://codingislove.com/realtime-search-javascript/",
+			"host": "Coding is love",
+			"hostLink": "https://codingislove.com/"
+		},
+		{
+			"name": "Single page architecture with JavaScript",
+			"description": "This blog post is a beginner's guide to SPA or single page architecture. It talks about why SPA is important and helps you build a small single page app.",
+			"link": "https://codingislove.com/implementing-single-page-architecture-with-vanilla-javascript/",
+			"host": "Coding is love",
+			"hostLink": "https://codingislove.com/"
+		},
+		{
+			"name": "Hack to keep your Heroku web app awake 24/7",
+			"description": "This is a post on how to smartly keep your free Heroku server awake 24/7. It involves a bit of coding and a lot of relief.",
+			"link": "https://teckguide.blogspot.com/2017/01/heroku-dyno-hack.html",
+			"host": "Teckguide",
+			"hostLink": "https://teckguide.blogspot.com/"
+		}	
+	]
+}

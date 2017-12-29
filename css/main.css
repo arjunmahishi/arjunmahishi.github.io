@@ -5,6 +5,7 @@ body{
 }
 a:link, a:active, a:visited{
 	color: #4CAF50;
+	text-decoration: none;
 }
 .main-title{
 	font-size: xx-large;
