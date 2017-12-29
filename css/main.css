@@ -45,3 +45,6 @@ a:link, a:active, a:visited{
     padding: 5px;
     font-family: monospace;
 }
+footer{
+	text-align: center !important;
+}
