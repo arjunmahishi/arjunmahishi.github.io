@@ -1,8 +1,8 @@
+//// Custom Router ////
 const pages = [
-	'home',
-	'summary',
-	'projects',
-	'contact'
+	'main',
+	'blog-links',
+	'projects'
 ];
 
 const openPage = target => {
@@ -14,3 +14,7 @@ const openPage = target => {
 		}
 	})
 }
+
+openPage("main");
+////		////
+
