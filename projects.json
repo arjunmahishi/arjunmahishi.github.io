@@ -2,8 +2,21 @@
 	"projects": [
 		{
 			"name": "Instify",
-			"description": "Instify is an android application that lets students keep track of their attendance, timetable, marks and much more. This app is currently being used by most of the students on the campus.",
-			"link": "https://play.google.com/store/apps/details?id=com.instify.android&hl=en"
+			"description": "Instify is an android application that lets students keep track of their attendance, timetable, marks and much more. This app is currently being used by most of the students in SRM university, Ramapuram.",
+			"link": "https://play.google.com/store/apps/details?id=com.instify.android&hl=en",
+			"linkType": "Play store link"
+		},
+		{
+			"name": "Vanilla-pwa",
+			"description": "A simple NPM package to generate all the files and code necessary for a progressive web app. The generated code is completely vanilla (pure javaScript without any need for transpiling). This project was built completely with node.js.",
+			"link": "https://www.npmjs.com/package/vanilla-pwa",
+			"linkType": "NPM link"
+		},
+		{
+			"name": "Trip-me",
+			"description": "A web app that gets you tripping. The app listens to the music playing in the background and creates a trippy experience by generating bizarre graphics with 2D and 3D shapes using webGL. This web-app is an effort to create art by combining music and coordinate geometry. The front-end was built from scratch without using any CSS framework to maintain an artistic look-n-feel.",
+			"link": "https://tripme.netlify.com",
+			"linkType": "PWA link"
 		}
 	]
 }

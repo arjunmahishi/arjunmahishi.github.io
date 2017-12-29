@@ -34,7 +34,7 @@ a:link, a:active, a:visited{
     margin-top: 40px;
 }
 .card-title{
-
+	font-size: -webkit-xxx-large;
 }
 .btn{
 	border-style: solid;

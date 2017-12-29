@@ -40,20 +40,30 @@ setInterval(() => {
 		button.style.color = randomHexColorCode();
 	})
 
+	Array.prototype.slice.call(document.querySelectorAll(".card-title")).map(title => {
+		title.style.borderColor = randomHexColorCode();
+		title.style.color = randomHexColorCode();
+	})
+
 }, colorFrequency);
 
 //// Projects updater ////
 
-fetch("projects.json").then((data) => {
-	console.log(data.body);
-})
+fetch("projects.json").then((response) => {
+	response.json().then(data => {
+		data.projects.map(project => {
+			let card = `
+			<div class="card">
+			    <div class="card-title">${project.name}</div>
+			    <p>${project.description}</p>
+			    <a href="${project.link}" target="_blank">
+			        <button class="btn">${project.linkType}</button>
+			    </a>
+			</div>`;
 
-// `<div class="card">
-//     <div class="card-title">Test title</div>
-//     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-//     <a href="#">
-//         <button class="btn">Link</button>
-//     </a>
-// </div>`
+			document.querySelector(".pro-list").innerHTML += card;
+		})
+	})
+})
 
 //// Publications updater ////
