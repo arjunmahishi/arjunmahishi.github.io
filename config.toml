@@ -2,11 +2,11 @@ baseURL = "https://example.com/"
 languageCode = "en"
 title = "Arjun Mahishi"
 theme = "color-your-world"
-
 enableEmoji = true
 enableInlineShortcodes = true
-
 paginate = 5
+googleAnalytics = "UA-41041173-4"
+publishDir = "docs"
 
 [markup]
   [markup.goldmark]
