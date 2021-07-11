@@ -2,7 +2,6 @@
 title: "Using Golang's Stringer tool"
 date: 2020-01-28
 tags: [ golang, tools, good-practices ]
-draft: true
 ---
 
 **Straight from the documentation:**
