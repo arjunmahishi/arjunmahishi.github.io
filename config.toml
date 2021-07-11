@@ -67,7 +67,7 @@ publishDir = "docs"
     maxLength = 42  # Default is 32
     
     # Optional placeholder for search field
-    placeholder = "ie.: lorem ipsum"
+    placeholder = "Search for blog posts"
     
 
   [params.style]
@@ -175,7 +175,7 @@ publishDir = "docs"
       [[languages.en.menu.main]]
         name = "Blog posts"
         weight = 1
-        url = "https://arjunmahishi.medium.com/"
+        url = "/posts"
 
       [[languages.en.menu.main]]
         name = "Music"
