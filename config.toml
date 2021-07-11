@@ -1,6 +1,6 @@
 baseURL = "https://example.com/"
 languageCode = "en"
-title = "Arjun Mahishi"
+title = "ಅರ್ಜುನ್ ಮಹಿಷಿ"
 theme = "color-your-world"
 enableEmoji = true
 enableInlineShortcodes = true
@@ -67,7 +67,7 @@ publishDir = "docs"
     maxLength = 42  # Default is 32
     
     # Optional placeholder for search field
-    placeholder = "Search for blog posts"
+    placeholder = "Search for stuff here..."
     
 
   [params.style]
@@ -173,12 +173,17 @@ publishDir = "docs"
     [languages.en.menu]
 
       [[languages.en.menu.main]]
-        name = "Blog posts"
+        name = "Music"
         weight = 1
+        url = "https://www.youtube.com/channel/UC9eTgNyhtPaVf7h-YEo-R2w"
+
+      [[languages.en.menu.main]]
+        name = "Blog posts"
+        weight = 2
         url = "/posts"
 
       [[languages.en.menu.main]]
-        name = "Music"
+        name = "vim-adventures"
         weight = 2
-        url = "https://www.youtube.com/channel/UC9eTgNyhtPaVf7h-YEo-R2w"
-      
+        url = "/vim-adventures"
+
