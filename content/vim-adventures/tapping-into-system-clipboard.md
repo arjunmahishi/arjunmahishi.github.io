@@ -2,7 +2,6 @@
 title: "Tapping into the system clipboard"
 date: 2021-07-11T10:45:42+05:30
 tags: [ vim ]
-draft: true
 ---
 
 ### TL;DR
