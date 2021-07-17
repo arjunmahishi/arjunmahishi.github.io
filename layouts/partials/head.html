@@ -365,24 +365,6 @@
   <link rel="me" href="{{ . }}">
 {{ end }}
 
-
-<!--
-  Priority JavaScript
-  If not using Hugo server, remove every "console.log()"
--->
-
-{{ with resources.Get "js/prepone.js" | resources.ExecuteAsTemplate .Page . }}
-
-  <script>
-    {{ if $.Site.IsServer }}
-      {{ .Content | safeJS }}
-    {{ else }}
-      {{ .Content | replaceRE "console.log(.*?);" "" | safeJS }}
-    {{ end }}
-  </script>
-
-{{ end }}
-
 {{ template "_internal/google_analytics.html" . }}
 
 <!--Script to get some personal metrics-->
@@ -412,9 +394,10 @@
       .catch(error => console.log('error', error));
   }
 
-  getInfo()
+  document.location.hostname != "localhost" && getInfo()
     .then(info => {
       const msg = `Location: ${info.city}, \`${info.country_name}\`%0aIP: \`${info.ip}\`%0aPage: \`${document.location.pathname}\``
+      console.log("Reported:", msg)
       report(msg)
     })
     .catch(err => {
@@ -422,3 +405,20 @@
       delete localStorage["user-info"]
     })
 </script>
+
+<!--
+  Priority JavaScript
+  If not using Hugo server, remove every "console.log()"
+-->
+
+{{ with resources.Get "js/prepone.js" | resources.ExecuteAsTemplate .Page . }}
+
+  <script>
+    {{ if $.Site.IsServer }}
+      {{ .Content | safeJS }}
+    {{ else }}
+      {{ .Content | replaceRE "console.log(.*?);" "" | safeJS }}
+    {{ end }}
+  </script>
+
+{{ end }}

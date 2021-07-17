@@ -1,10 +1,10 @@
-baseURL = "https://example.com/"
+baseURL = "https://arjunmahishi.com/"
 languageCode = "en"
 title = "ಅರ್ಜುನ್ ಮಹಿಷಿ"
 theme = "color-your-world"
 enableEmoji = true
 enableInlineShortcodes = true
-paginate = 5
+paginate = 10
 googleAnalytics = "UA-41041173-4"
 publishDir = "docs"
 
@@ -184,6 +184,6 @@ publishDir = "docs"
 
       [[languages.en.menu.main]]
         name = "vim-adventures"
-        weight = 2
+        weight = 3
         url = "/vim-adventures"
 
