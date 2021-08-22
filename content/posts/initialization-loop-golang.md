@@ -1,5 +1,5 @@
 ---
-title: "Initilization Loop in Golang"
+title: "Initialization Loop in Golang"
 date: 2021-08-22T10:00:00+05:30
 tags: [ golang ]
 ---
