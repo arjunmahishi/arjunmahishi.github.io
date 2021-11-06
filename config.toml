@@ -120,11 +120,11 @@ publishDir = "docs"
     paragraph     = "Nothing to see here, buddy."
     
   [params.social.centralized]
-    github        = [ "arjunmahishi" ]
-    instagram     = [ "arjunmahishi" ]
-    linkedin      = [ "arjun-mahishi-b18968126" ]
-    medium        = [ "@arjunmahishi" ]
     twitter       = [ "arjunmahishi", "@arjunmahishi" ]
+    github        = [ "arjunmahishi" ]
+    linkedin      = [ "arjun-mahishi-b18968126" ]
+    instagram     = [ "arjunmahishi" ]
+    # medium        = [ "@arjunmahishi" ]
     youtube       = [ "UC9eTgNyhtPaVf7h-YEo-R2w" ]
     #entry         = [ "username", "label (optional)" ]
     
