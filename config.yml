@@ -41,8 +41,8 @@ params:
   tocopen: false
 
   assets:
-    # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
+    disableHLJS: true # to disable highlight.js
+    disableFingerprinting: true
     favicon: "<link / abs url>"
     favicon16x16: "<link / abs url>"
     favicon32x32: "<link / abs url>"
@@ -81,6 +81,10 @@ params:
       url: "https://github.com/arjunmahishi"
     - name: instagram
       url: "https://instagram.com/arjunmahishi"
+    - name: youtube
+      url: "https://www.youtube.com/channel/UC9eTgNyhtPaVf7h-YEo-R2w"
+    - name: RSS
+      url: "index.xml"
     # - name: stackoverflow
     #   url: "https://stackoverflow.com"
 
@@ -98,7 +102,7 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://github.com/arjunmahishi/arjunmahishi.github.io/edit/master/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -130,10 +134,9 @@ menu:
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true
-# markup:
-#     highlight:
-#         # anchorLineNos: true
-#         codeFences: true
-#         guessSyntax: true
-#         lineNos: true
-#         style: monokai
+# pygmentsUseFences: true
+markup:
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    style: monokai
