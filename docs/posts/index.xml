@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ಅರ್ಜುನ್ ಮಹಿಷಿ</title><link>https://arjunmahishi.com/posts/</link><description>Arjun Mahishi's personal website</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 22 Aug 2021 10:00:00 +0530</lastBuildDate><atom:link href="https://arjunmahishi.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Initialization Loop in Golang</title><link>https://arjunmahishi.com/posts/initialization-loop-golang/</link><pubDate>Sun, 22 Aug 2021 10:00:00 +0530</pubDate><guid>https://arjunmahishi.com/posts/initialization-loop-golang/</guid><description>A couple of days ago, I was writing a program in Go and ran into an initialization loop. I was able to quickly fix it with 1 google search which landed on this StackOverflow question. But it didn&amp;rsquo;t explain what an init loop is and why it occurs. So, this post is an attempt to explain the what and the why.
-Example of an init loop package main var ( globalFunc = func1 ) func main() {} func func1() { func2() } func func2() { globalFunc() } Trying to compile the above code will give you this error:</description></item><item><title>Using Golang's Stringer tool</title><link>https://arjunmahishi.com/posts/golang-stringer/</link><pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate><guid>https://arjunmahishi.com/posts/golang-stringer/</guid><description>Straight from the documentation:
-Stringer is a tool to automate the creation of methods that satisfy the fmt.Stringer interface. Given the name of a (signed or unsigned) integer type T that has constants defined, stringer will create a new self-contained Go source file implementing:
-func (t T) String() string The file is created in the same package and directory as the package that defines T. It has helpful defaults designed for use with go generate.</description></item><item><title>Test-driven development with Golang</title><link>https://arjunmahishi.com/posts/tdd-with-golang/</link><pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate><guid>https://arjunmahishi.com/posts/tdd-with-golang/</guid><description>Testing — An activity hated by most human beings Testing is an investigation done to make sure that the code we have written is reliable and meets the given requirements. The most common way to test code is to write unit tests for different units of the codebase. This makes it easy to isolate the bugs. All of the software development processes include testing as an integral part. The one we are going to talk about today is called Test Driven Development or TDD in short.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blog posts on Arjun Mahishi</title>
+    <link>https://arjunmahish.com/posts/</link>
+    <description>Recent content in Blog posts on Arjun Mahishi</description>
+    <image>
+      <url>https://arjunmahish.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://arjunmahish.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 22 Aug 2021 10:00:00 +0530</lastBuildDate><atom:link href="https://arjunmahish.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Initialization Loop in Golang</title>
+      <link>https://arjunmahish.com/posts/initialization-loop-golang/</link>
+      <pubDate>Sun, 22 Aug 2021 10:00:00 +0530</pubDate>
+      
+      <guid>https://arjunmahish.com/posts/initialization-loop-golang/</guid>
+      <description>A couple of days ago, I was writing a program in Go and ran into an initialization loop. I was able to quickly fix it with 1 google search which landed on this StackOverflow question. But it didn&amp;rsquo;t explain what an init loop is and why it occurs. So, this post is an attempt to explain the what and the why.
+Example of an init loop package main var ( globalFunc = func1 ) func main() {} func func1() { func2() } func func2() { globalFunc() } Trying to compile the above code will give you this error:</description>
+    </item>
+    
+    <item>
+      <title>Using Golang&#39;s Stringer tool</title>
+      <link>https://arjunmahish.com/posts/golang-stringer/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://arjunmahish.com/posts/golang-stringer/</guid>
+      <description>Straight from the documentation:
+ Stringer is a tool to automate the creation of methods that satisfy the fmt.Stringer interface. Given the name of a (signed or unsigned) integer type T that has constants defined, stringer will create a new self-contained Go source file implementing:
+func (t T) String() string The file is created in the same package and directory as the package that defines T. It has helpful defaults designed for use with go generate.</description>
+    </item>
+    
+    <item>
+      <title>Test-driven development with Golang</title>
+      <link>https://arjunmahish.com/posts/tdd-with-golang/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://arjunmahish.com/posts/tdd-with-golang/</guid>
+      <description>Testing — An activity hated by most human beings Testing is an investigation done to make sure that the code we have written is reliable and meets the given requirements. The most common way to test code is to write unit tests for different units of the codebase. This makes it easy to isolate the bugs. All of the software development processes include testing as an integral part. The one we are going to talk about today is called Test Driven Development or TDD in short.</description>
+    </item>
+    
+  </channel>
+</rss>
