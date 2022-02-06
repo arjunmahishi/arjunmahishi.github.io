@@ -67,6 +67,20 @@
 </header>
 <article class="post-entry tag-entry">
 <header class=entry-header>
+<h2>Returning empty interfaces in Golang
+</h2>
+</header>
+<section class=entry-content>
+<p>This week I ran into a bug with an empty interface{} which highlighted a smell in the code. This post describes what the bug is, how I fixed it, and the lessons learned.
+The Bug We found a couple of recovered panics in the logs. These panics were happening pretty frequently. This is what the panic message said:
+panic: interface conversion: interface {} is nil, not []*typeName
+From the panic message, it is pretty obvious that somewhere in the code we are trying to convert an interface{} to a specific array type when the value is actually nil....</p>
+</section>
+<footer class=entry-footer><span title="2022-01-08 12:49:31 +0530 IST">January 8, 2022</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Arjun Mahishi</footer>
+<a class=entry-link aria-label="post link to Returning empty interfaces in Golang" href=https://arjunmahishi.com/posts/empty-interfaces-golang/></a>
+</article>
+<article class="post-entry tag-entry">
+<header class=entry-header>
 <h2>Initialization Loop in Golang
 </h2>
 </header>
