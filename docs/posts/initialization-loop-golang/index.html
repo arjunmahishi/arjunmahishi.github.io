@@ -20,7 +20,6 @@ Example of an init loop package main var ( globalFunc = func1 ) func main() {} f
 <meta name=generator content="Hugo 0.92.0">
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style>
-<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-41041173-4','auto'),ga('send','pageview'))</script><meta property="og:title" content="Initialization Loop in Golang">
 <meta property="og:description" content="A couple of days ago, I was writing a program in Go and ran into an initialization loop. I was able to quickly fix it with 1 google search which landed on this StackOverflow question. But it didn&rsquo;t explain what an init loop is and why it occurs. So, this post is an attempt to explain the what and the why.
@@ -38,7 +37,7 @@ Example of an init loop package main var ( globalFunc = func1 ) func main() {} f
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Initialization Loop in Golang","name":"Initialization Loop in Golang","description":"A couple of days ago, I was writing a program in Go and ran into an initialization loop. I was able to quickly fix it with 1 google search which landed on this StackOverflow question. But it didn\u0026rsquo;t explain what an init loop is and why it occurs. So, this post is an attempt to explain the what and the why.\nExample of an init loop package main var ( globalFunc = func1 ) func main() {} func func1() { func2() } func func2() { globalFunc() } Trying to compile the above code will give you this error:","keywords":["golang"],"articleBody":"A couple of days ago, I was writing a program in Go and ran into an initialization loop. I was able to quickly fix it with 1 google search which landed on this StackOverflow question. But it didn’t explain what an init loop is and why it occurs. So, this post is an attempt to explain the what and the why.\nExample of an init loop package main var ( globalFunc = func1 ) func main() {} func func1() { func2() } func func2() { globalFunc() } Trying to compile the above code will give you this error:\n./main.go:4:2: initialization loop: /tmp/test/main.go:4:2: globalFunc refers to /tmp/test/main.go:9:6: func1 refers to /tmp/test/main.go:13:6: func2 refers to /tmp/test/main.go:4:2: globalFunc The What Looking at the error message, it should be quite clear what an initialization loop is. globalFunc refers to func1, func1 refers to func2, func2 refers to globalFunc - creating a loop. The problem is not referencing things in a loop. The problem is while initializing things. The compiler can’t decide what to initialize first. That’s why it refuses to compile the code and throws an error.\nThe Why To understand why the compiler can’t decide what to initialize first, you’ll need to understand what order the compiler initializes things in.\nThe order of initialization in Go\n Imported packages Globally declared variables/constants init() function  Within the global variables, the order depends on references. If one variable is referencing another, the referenced variable is initialized first. Example:\nvar ( a = b / 10 b = 100 // initialised first ) Here, b is initialized first because a depends on it. But if the variables are not dependant on each other, they will be initialized in the order they are declared in.\nvar ( a = 10 // initilized first  b = 100 ) When the dependency of variables forms a loop, it throws the error (like the first code snippet).\nvar ( a = b / 10 b = a * 10 ) // compiler: lol 🤣 So, how do we fix this?The Solution Enter init() function\nWhen the dependency of variables forms a loop, the order of initialization can be enforced using the init function. What that means is, the variables should just be declared globally and the initialization should be done in the init function. So, the corrected first snippet would look something like this:\npackage main var ( globalFunc func() // declaration with func() as type ) func init() { globalFunc = func1 // initialize value } func main() {} func func1() { func2() } func func2() { globalFunc() } // compiler: 🤠 Simpler example:\nvar ( a, b int ) func init() { a = b / 10 b = a * 10 }  This is probably a very fundamental and obvious concept to many people. But I encountered this error for the first time. I thought writing a mini blog post about it would help me (and hopefully more Golang noobs) understand it a little better. If you spot a mistake in what I’ve explained or see a typo, slide into my twitter DM. Thanks 🙏🏽\nReferences  https://github.com/golang/go/issues/1817 https://golang.org/doc/effective_go#initialization  ","wordCount":"520","inLanguage":"en","datePublished":"2021-08-22T10:00:00+05:30","dateModified":"2021-08-22T10:00:00+05:30","author":{"@type":"Person","name":"Arjun Mahishi"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://arjunmahishi.com/posts/initialization-loop-golang/"},"publisher":{"@type":"Organization","name":"Arjun Mahishi","logo":{"@type":"ImageObject","url":"https://arjunmahishi.com/%3Clink%20/%20abs%20url%3E"}}}</script>
 </head>
 <body id=top>
-<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<script>localStorage.getItem("pref-theme")==="dark"&&document.body.classList.add('dark')</script>
 <header class=header>
 <nav class=nav>
 <div class=logo>
@@ -50,13 +49,18 @@ Example of an init loop package main var ( globalFunc = func1 ) func main() {} f
 </div>
 <ul id=menu>
 <li>
-<a href=https://arjunmahishi.com/posts/ title="Blog posts">
-<span>Blog posts</span>
+<a href=https://arjunmahishi.com/projects/ title=Projects>
+<span>Projects</span>
 </a>
 </li>
 <li>
-<a href=https://arjunmahishi.com/vim-adventures/ title="Vim Adventures">
-<span>Vim Adventures</span>
+<a href=https://arjunmahishi.com/posts/ title=Blog>
+<span>Blog</span>
+</a>
+</li>
+<li>
+<a href=https://arjunmahishi.com/vim-adventures/ title=Vim-Adventures>
+<span>Vim-Adventures</span>
 </a>
 </li>
 <li>

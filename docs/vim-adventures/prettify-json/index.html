@@ -20,7 +20,6 @@ I knew that jq can be used on CLI to format JSON, so I wanted to use that from w
 <meta name=generator content="Hugo 0.92.0">
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style>
-<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-41041173-4','auto'),ga('send','pageview'))</script><meta property="og:title" content="Prettify JSON in Vim">
 <meta property="og:description" content="TL;DR au filetype json nmap <leader>f :%!jq '.' %<CR> Challenge If you have ever opened a large auto-generated JSON file, you probably would have wanted to pull your hair out. To be able to read it easily, you would have to copy the whole thing, open an online JSON formatting tool, paste it, get the formatted output and read it.
@@ -38,7 +37,7 @@ I knew that jq can be used on CLI to format JSON, so I wanted to use that from w
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Prettify JSON in Vim","name":"Prettify JSON in Vim","description":"TL;DR au filetype json nmap \u0026lt;leader\u0026gt;f :%!jq \u0026#39;.\u0026#39; %\u0026lt;CR\u0026gt; Challenge If you have ever opened a large auto-generated JSON file, you probably would have wanted to pull your hair out. To be able to read it easily, you would have to copy the whole thing, open an online JSON formatting tool, paste it, get the formatted output and read it.\nI knew that jq can be used on CLI to format JSON, so I wanted to use that from within vim to do the formatting and skip the above circus.","keywords":["vim"],"articleBody":"TL;DR au filetype json nmap f :%!jq '.' % Challenge If you have ever opened a large auto-generated JSON file, you probably would have wanted to pull your hair out. To be able to read it easily, you would have to copy the whole thing, open an online JSON formatting tool, paste it, get the formatted output and read it.\nI knew that jq can be used on CLI to format JSON, so I wanted to use that from within vim to do the formatting and skip the above circus.\nSolution If you are a regular vim user, then you probably also are a regular CLI user. So, there is a good chance that you have heard of jq and used it before. If not, check it out here NOW!\nOn the CLI, the most common way to use jq to format JSON is with this command jq '.' . This gives the entire JSON object with proper indentation. Try it:\necho '{\"key1\": \"val1\", \"key2\": \"val2\"}' | jq '.' Now, how do we run this from within vim?\nIf you don’t already know, vim has a command mode that allows you to run vim commands (more about it here). It also allows us to run bash commands. This is done by prefixing the command with a bang (!). Try running this :!echo \"hello world\" in command mode. Similarly, run the jq command:\n:%!jq '.' % Wondering what the hell % is for?\n% refers to the current file’s name. Try running :!echo %. It will print the current file’s name. So, the % at the end is to pass the current file’s name to the jq command as an argument. The first % tells vim to replace the contents of the current buffer with the output of the following command.\nOne final step – create a key mapping so that you won’t have to type the whole command every time. Add this to your vimrc/init.vim:\nau filetype json nmap f :%!jq '.' % This will map , + f (, is my  key) to the above jq command when the file type is JSON.\nHope that helps :)\n","wordCount":"359","inLanguage":"en","datePublished":"2021-10-10T19:00:00+05:30","dateModified":"2021-10-10T19:00:00+05:30","author":{"@type":"Person","name":"Arjun Mahishi"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://arjunmahishi.com/vim-adventures/prettify-json/"},"publisher":{"@type":"Organization","name":"Arjun Mahishi","logo":{"@type":"ImageObject","url":"https://arjunmahishi.com/%3Clink%20/%20abs%20url%3E"}}}</script>
 </head>
 <body id=top>
-<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<script>localStorage.getItem("pref-theme")==="dark"&&document.body.classList.add('dark')</script>
 <header class=header>
 <nav class=nav>
 <div class=logo>
@@ -50,13 +49,18 @@ I knew that jq can be used on CLI to format JSON, so I wanted to use that from w
 </div>
 <ul id=menu>
 <li>
-<a href=https://arjunmahishi.com/posts/ title="Blog posts">
-<span>Blog posts</span>
+<a href=https://arjunmahishi.com/projects/ title=Projects>
+<span>Projects</span>
 </a>
 </li>
 <li>
-<a href=https://arjunmahishi.com/vim-adventures/ title="Vim Adventures">
-<span>Vim Adventures</span>
+<a href=https://arjunmahishi.com/posts/ title=Blog>
+<span>Blog</span>
+</a>
+</li>
+<li>
+<a href=https://arjunmahishi.com/vim-adventures/ title=Vim-Adventures>
+<span>Vim-Adventures</span>
 </a>
 </li>
 <li>

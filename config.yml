@@ -24,7 +24,7 @@ params:
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
+  defaultTheme: light # dark, light
   disableThemeToggle: false
 
   ShowReadingTime: true
@@ -119,18 +119,22 @@ params:
 
 menu:
   main:
-    - identifier: posts
-      name: Blog posts
-      url: /posts/
+    - identifier: projects
+      name: Projects
+      url: /projects/
       weight: 10
-    - identifier: vim-adventures
-      name: Vim Adventures
-      url: /vim-adventures/
+    - identifier: posts
+      name: Blog
+      url: /posts/
       weight: 20
+    - identifier: vim-adventures
+      name: Vim-Adventures
+      url: /vim-adventures/
+      weight: 30
     - identifier: Music
       name: Music
       url: https://www.youtube.com/channel/UC9eTgNyhtPaVf7h-YEo-R2w
-      weight: 30
+      weight: 40
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true

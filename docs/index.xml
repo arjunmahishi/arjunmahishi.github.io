@@ -9,7 +9,17 @@
       <link>https://arjunmahishi.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 08 Jan 2022 12:49:31 +0530</lastBuildDate><atom:link href="https://arjunmahishi.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Aug 2022 20:49:58 +0530</lastBuildDate><atom:link href="https://arjunmahishi.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Remote Write Dummy Metrics</title>
+      <link>https://arjunmahishi.com/posts/remote-write-dummy-metrics/</link>
+      <pubDate>Wed, 31 Aug 2022 20:49:58 +0530</pubDate>
+      
+      <guid>https://arjunmahishi.com/posts/remote-write-dummy-metrics/</guid>
+      <description>While working on any system built on top of prometheus based storage, you might want to use dummy data for testing. But prometheus based storages (prometheus, victoriaMetrics, m3db etc) don’t support “insert” queries like SQL. So, this doc will walk you through how to remote_write data into prometheus without having to write any code
+Setup   Make sure you have a tool that can spin up a simple HTTP server that can serve static files.</description>
+    </item>
+    
     <item>
       <title>Returning empty interfaces in Golang</title>
       <link>https://arjunmahishi.com/posts/empty-interfaces-golang/</link>

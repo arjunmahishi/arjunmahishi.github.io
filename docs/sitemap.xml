@@ -3,10 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://arjunmahishi.com/</loc>
-    <lastmod>2022-01-08T12:49:31+05:30</lastmod>
+    <lastmod>2022-08-31T20:49:58+05:30</lastmod>
   </url><url>
     <loc>https://arjunmahishi.com/posts/</loc>
-    <lastmod>2022-01-08T12:49:31+05:30</lastmod>
+    <lastmod>2022-08-31T20:49:58+05:30</lastmod>
+  </url><url>
+    <loc>https://arjunmahishi.com/posts/remote-write-dummy-metrics/</loc>
+    <lastmod>2022-08-31T20:49:58+05:30</lastmod>
   </url><url>
     <loc>https://arjunmahishi.com/tags/golang/</loc>
     <lastmod>2022-01-08T12:49:31+05:30</lastmod>
@@ -50,5 +53,7 @@
     <loc>https://arjunmahishi.com/categories/</loc>
   </url><url>
     <loc>https://arjunmahishi.com/search/</loc>
+  </url><url>
+    <loc>https://arjunmahishi.com/projects/</loc>
   </url>
 </urlset>

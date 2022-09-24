@@ -20,7 +20,6 @@
 <link rel=alternate type=application/rss+xml href=https://arjunmahishi.com/posts/index.xml>
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style>
-<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-41041173-4','auto'),ga('send','pageview'))</script><meta property="og:title" content="Blog posts">
 <meta property="og:description" content>
@@ -33,7 +32,7 @@
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog posts","item":"https://arjunmahishi.com/posts/"}]}</script>
 </head>
 <body class=list id=top>
-<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<script>localStorage.getItem("pref-theme")==="dark"&&document.body.classList.add('dark')</script>
 <header class=header>
 <nav class=nav>
 <div class=logo>
@@ -45,13 +44,18 @@
 </div>
 <ul id=menu>
 <li>
-<a href=https://arjunmahishi.com/posts/ title="Blog posts">
-<span class=active>Blog posts</span>
+<a href=https://arjunmahishi.com/projects/ title=Projects>
+<span>Projects</span>
 </a>
 </li>
 <li>
-<a href=https://arjunmahishi.com/vim-adventures/ title="Vim Adventures">
-<span>Vim Adventures</span>
+<a href=https://arjunmahishi.com/posts/ title=Blog>
+<span class=active>Blog</span>
+</a>
+</li>
+<li>
+<a href=https://arjunmahishi.com/vim-adventures/ title=Vim-Adventures>
+<span>Vim-Adventures</span>
 </a>
 </li>
 <li>
@@ -66,6 +70,18 @@
 <header class=page-header><div class=breadcrumbs><a href=https://arjunmahishi.com/>Home</a></div>
 <h1>Blog posts</h1>
 </header>
+<article class=post-entry>
+<header class=entry-header>
+<h2>Remote Write Dummy Metrics
+</h2>
+</header>
+<section class=entry-content>
+<p>While working on any system built on top of prometheus based storage, you might want to use dummy data for testing. But prometheus based storages (prometheus, victoriaMetrics, m3db etc) don’t support “insert” queries like SQL. So, this doc will walk you through how to remote_write data into prometheus without having to write any code
+Setup Make sure you have a tool that can spin up a simple HTTP server that can serve static files....</p>
+</section>
+<footer class=entry-footer><span title="2022-08-31 20:49:58 +0530 IST">August 31, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Arjun Mahishi</footer>
+<a class=entry-link aria-label="post link to Remote Write Dummy Metrics" href=https://arjunmahishi.com/posts/remote-write-dummy-metrics/></a>
+</article>
 <article class=post-entry>
 <header class=entry-header>
 <h2>Returning empty interfaces in Golang
