@@ -14,13 +14,13 @@ this works, it could be a great alternative to using grafana's metrics explorer
 
 Github: https://github.com/arjunmahishi/pxp
 
-### [run-code.nvim](https://arjunmahishi.com/run-code.nvim/)
+### [flow.nvim](https://arjunmahishi.com/flow.nvim/)
 
 A lightweight neovim plugin to quickly run a snippet of code (in the context of the current
 file you're editing) without ever leaving neovim. Gives you a slight boost in productivity by
 helping you automate parts of your development workflow. Has a pretty cool integration with telescope
 
-Github: https://github.com/arjunmahishi/run-code.nvim
+Github: https://github.com/arjunmahishi/flow.nvim
 
 ### [loadbalancer in Go](https://github.com/arjunmahishi/loadbalancer-in-go)
 
