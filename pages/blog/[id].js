@@ -1,3 +1,5 @@
+import Layout from "../../components/layout";
+
 import { getPostData, getAllPostIds } from "../../lib/posts";
 
 export async function getStaticPaths() {
@@ -20,20 +22,11 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Post({ postData }) {
-  console.log("debug", postData)
-
   return (
-    <div>
-      <h1>{postData.title}</h1>
-      <i>{postData.date}</i><br />
-      <b>tags</b>
-      <ul>
-        {postData.tags.map((tag, i) => (
-          <li key={i}>{tag}</li>
-        ))}
-      </ul>
-
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHTML }} />
-    </div>
+    <Layout meta={postData}>
+      <article
+          className="prose lg:prose-xl px-8 m-auto my-4 sm:my-16 prose-img:rounded-xl"
+          dangerouslySetInnerHTML={{ __html: postData.contentHTML }} />
+    </Layout>
   );
 }
