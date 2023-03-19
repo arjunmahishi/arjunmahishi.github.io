@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>tools on Arjun Mahishi</title>
+    <link>https://arjunmahish.com/tags/tools/</link>
+    <description>Recent content in tools on Arjun Mahishi</description>
+    <image>
+      <url>https://arjunmahish.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://arjunmahish.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 28 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arjunmahish.com/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Golang&#39;s Stringer tool</title>
+      <link>https://arjunmahish.com/posts/golang-stringer/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://arjunmahish.com/posts/golang-stringer/</guid>
+      <description>Straight from the documentation:
+ Stringer is a tool to automate the creation of methods that satisfy the fmt.Stringer interface. Given the name of a (signed or unsigned) integer type T that has constants defined, stringer will create a new self-contained Go source file implementing:
+func (t T) String() string The file is created in the same package and directory as the package that defines T. It has helpful defaults designed for use with go generate.</description>
+    </item>
+    
+  </channel>
+</rss>
