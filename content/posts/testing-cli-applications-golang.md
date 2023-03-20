@@ -1,6 +1,6 @@
 ---
 title: "Testing CLI Applications Golang"
-date: 2022-06-04T17:43:27+05:30
+date: "2022-06-04"
 draft: true
 ---
 

@@ -25,7 +25,7 @@ export default function Post({ postData }) {
   return (
     <Layout meta={postData}>
       <article
-          className="prose lg:prose-xl px-8 m-auto my-4 sm:my-16 prose-img:rounded-xl"
+          className="prose lg:prose-lg px-8 m-auto my-4 sm:my-16 prose-img:rounded-xl"
           dangerouslySetInnerHTML={{ __html: postData.contentHTML }} />
     </Layout>
   );

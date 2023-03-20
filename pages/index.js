@@ -1,22 +1,28 @@
-import { getSortedPostsData } from '../lib/posts';
+// import { getSortedPostsData } from '../lib/posts';
 import Head from 'next/head';
 import Layout from '../components/layout';
+import { getHomeContent } from '../lib/home';
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const data = await getHomeContent();
+
   return {
     props: {
-      allPostsData,
+      data,
     },
   };
 }
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <Layout>
       <Head>
         <title>Arjun Mahishi</title>
       </Head>
+
+      <article
+          className="prose lg:prose-xl px-8 m-auto my-4 sm:my-16 prose-img:rounded-xl"
+          dangerouslySetInnerHTML={{ __html: data.contentHTML }} />
     </Layout>
   )
 }

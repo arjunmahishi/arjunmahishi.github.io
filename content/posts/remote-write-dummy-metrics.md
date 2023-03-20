@@ -1,6 +1,6 @@
 ---
 title: "Remote Write Dummy Metrics"
-date: "2022-08-31T20:49:58+05:30"
+date: "2022-08-31"
 ---
 
 # Remote Write Dummy Metrics
