@@ -15,10 +15,10 @@ having to write any code
 
 1. Make sure you have a tool that can spin up a simple HTTP server that can serve static files. `python` also will do
 2. Install any prometheus based remote write agent 
-    
-    For `vmagent`, you can download the latest version of `vimutils` from this
-    [github release page](https://github.com/VictoriaMetrics/VictoriaMetrics/releases),
-    unarchive it and place the `vmagent` binary in your system PATH
+
+   For `vmagent`, you can download the latest version of `vimutils` from this
+   [github release page](https://github.com/VictoriaMetrics/VictoriaMetrics/releases),
+   unarchive it and place the `vmagent` binary in your system PATH
     
 
 ## Steps
