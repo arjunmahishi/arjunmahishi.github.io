@@ -6,7 +6,7 @@ export default function Layout({ children, meta }) {
   return (
     <>
       <Head>
-        <title>{`${meta.title} | Arjun Mahishi` || "Arjun Mahishi"}</title>
+        <title>{meta.title ? `${meta.title} | Arjun Mahishi` : "Arjun Mahishi"}</title>
         <link rel="icon" href="/favicon.ico" />
 
         <meta name="description" content={meta.description || "Arjun Mahishi's personal website"} />

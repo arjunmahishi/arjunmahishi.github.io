@@ -20,3 +20,7 @@
    60% { transform: rotate( 0.0deg) }
   100% { transform: rotate( 0.0deg) }
 }
+
+nav {
+  margin-top: 10px;
+}

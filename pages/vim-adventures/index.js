@@ -5,7 +5,7 @@ import Listing from '../../components/card';
 import { getAllPosts } from '../../lib/posts';
 
 export async function getStaticProps() {
-  const allPostsData = getAllPosts();
+  const allPostsData = getAllPosts('vim-adventures');
   return {
     props: {
       allPostsData,
@@ -15,10 +15,10 @@ export async function getStaticProps() {
 
 export default function BlogIndex({ allPostsData }) {
   return (
-    <Layout meta={{ title: "Blog" }}>
+    <Layout meta={{ title: "vim-adventures" }}>
       <Nav />
 
-      <Listing data={allPostsData} title={"Posts"} />
+      <Listing data={allPostsData} title={"Vim Adventures"} />
     </Layout>
   );
 }

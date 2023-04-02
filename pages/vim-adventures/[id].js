@@ -1,9 +1,10 @@
 import Layout from "../../components/layout";
 import Nav from "../../components/nav";
+
 import { getPostData, getAllPostIds } from "../../lib/posts";
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
+  const paths = getAllPostIds('vim-adventures');
 
   return {
     paths,
@@ -12,7 +13,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id);
+  const postData = await getPostData(params.id, 'vim-adventures');
 
   return {
     props: {
