@@ -10,11 +10,11 @@ export default function Nav() {
 
 
   return (
-    <nav className="flex flex-row w-2/3">
-      <div className="mix- text-2xl">
+    <nav className="flex flex-col lg:flex-row lg:w-2/3 place-items-center lg:place-items-start">
+      <div className="text-2xl">
         <Link className="underline decoration-2 underline-offset-4" href="/">ಅರ್ಜುನ್ ಮಹಿಷಿ</Link>
       </div>
-      <div className="flex grow justify-end">
+      <div className="flex grow justify-end mt-2 lg:mt-0">
         <ul className="p-1">
           {navItems.map((item, i) => {
             return <li className="mx-2 inline-block align-text-bottom" key={i}>

@@ -1,6 +1,6 @@
 import Layout from '../../components/layout';
 import Nav from '../../components/nav';
-import Listing from '../../components/card';
+import Listing from '../../components/listing';
 
 import { getAllPosts } from '../../lib/posts';
 
@@ -18,7 +18,7 @@ export default function BlogIndex({ allPostsData }) {
     <Layout meta={{ title: "Blog" }}>
       <Nav />
 
-      <Listing data={allPostsData} title={"Posts"} />
+      <Listing data={allPostsData} title={"Blog Posts"} urlPrefix="posts"/>
     </Layout>
   );
 }
