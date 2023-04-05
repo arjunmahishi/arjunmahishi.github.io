@@ -4,10 +4,8 @@
 
 const nextConfig   = {
   images: {
-    loader: 'akamai',
-    path: '',
+    unoptimized: true,
   },
-  assetPrefix: './',
 };
 
 export default   nextConfig;

@@ -1,28 +1,16 @@
-import Link from 'next/link'
 import Image from 'next/image'
 
 import Layout from '../components/layout';
 import Nav from '../components/nav';
 import Social from '../components/social';
-import { getMDContent } from '../lib/home';
 
-export async function getStaticProps() {
-  const data = await getMDContent(`home.md`);
-
-  return {
-    props: {
-      data,
-    },
-  };
-}
-
-export default function Home({ data }) {
+export default function Home() {
   return (
     <Layout>
       <Nav />
 
       <div className="flex flex-col items-center justify-center py-2 mt-10">
-        <Image src="/img/dp.jpg" 
+        <Image src="/img/dp.jpg"
           alt="Arjun Mahishi" 
           width={400} height={400}
           className="rounded-full" />
