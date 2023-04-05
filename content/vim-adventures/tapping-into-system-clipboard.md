@@ -1,12 +1,14 @@
 ---
 title: "Tapping into the system clipboard"
-date: 2021-07-11T10:45:42+05:30
+date: "2021-07-11"
 tags: [ vim ]
 ---
 
+# Tapping into the system clipboard
+
 ### TL;DR
 
-```
+```vim
 vmap <leader>y "*y
 nmap <leader>p "*p
 ```
@@ -19,7 +21,7 @@ Copying text to and from vim and the outside world is a pain in the ass. This is
 
 Add this to your vimrc/init.vim:
 
-```
+```vim
 vmap <leader>y "*y
 nmap <leader>p "*p
 ```

@@ -1,12 +1,14 @@
 ---
 title: "Prettify JSON in Vim"
-date: 2021-10-10T19:00:00+05:30
+date: "2021-10-10"
 tags: [ vim ]
 ---
 
+# Prettify JSON in Vim
+
 ### TL;DR
 
-```
+```vim
 au filetype json nmap <leader>f :%!jq '.' %<CR>
 ```
 
@@ -22,7 +24,7 @@ If you are a regular vim user, then you probably also are a regular CLI user. So
 
 On the CLI, the most common way to use `jq` to format JSON is with this command `jq '.' <file_name>`. This gives the entire JSON object with proper indentation. Try it:
 
-```
+```vim
 echo '{"key1": "val1", "key2": "val2"}' | jq '.'
 ```
 
@@ -30,7 +32,7 @@ Now, how do we run this from within vim?
 
 If you don't already know, vim has a command mode that allows you to run vim commands (more about it [here](https://www.freecodecamp.org/news/vim-editor-modes-explained/)). It also allows us to run bash commands. This is done by prefixing the command with a bang (`!`). Try running this `:!echo "hello world"` in command mode. Similarly, run the `jq` command:
 
-```
+```vim
 :%!jq '.' %
 ```
 
@@ -40,7 +42,7 @@ Wondering what the hell `%` is for?
 
 One final step -- create a key mapping so that you won't have to type the whole command every time. Add this to your vimrc/init.vim:
 
-```
+```vim
 au filetype json nmap <leader>f :%!jq '.' %<CR>
 ```
 

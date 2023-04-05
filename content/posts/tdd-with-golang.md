@@ -1,8 +1,10 @@
 ---
 title: "Test-driven development with Golang"
-date: 2018-07-31
+date: "2018-07-31"
 tags: [ golang, good-practices  ]
 ---
+
+# Test-driven development with Golang
 
 Testing — An activity hated by most human beings
  Testing is an investigation done to make sure that the code we have written is reliable and meets the given requirements. The most common way to test code is to write unit tests for different units of the codebase. This makes it easy to isolate the bugs. All of the software development processes include testing as an integral part. The one we are going to talk about today is called Test Driven Development or TDD in short.

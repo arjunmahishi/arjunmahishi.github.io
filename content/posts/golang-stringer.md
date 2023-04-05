@@ -1,8 +1,10 @@
 ---
 title: "Using Golang's Stringer tool"
-date: 2020-01-28
+date: "2020-01-28"
 tags: [ golang, tools, good-practices ]
 ---
+
+# Using Golang's Stringer tool
 
 **Straight from the documentation:**
 >

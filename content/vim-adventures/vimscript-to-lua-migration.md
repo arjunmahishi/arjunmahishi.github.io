@@ -1,8 +1,10 @@
 ---
 title: "Rewriting my existing neovim config in lua"
-date: 2021-11-05T11:44:01+05:30
+date: "2021-11-05"
 tags: [ vim ]
 ---
+
+# Rewriting my existing neovim config in lua
 
 I've been wanting to rewrite my neovim config in Lua for a really long time. I didn't really know why. Just wanted to do it. Lua has a more sane and intuitive syntax compared to vimscript. So, it ends up being easier to maintain, refactor and extend. Plus, I think the entire neovim community is moving forward in this direction. I am hearing good things about vimscript in vim9, but maybe that will be an opportunity for another such blog post.
 

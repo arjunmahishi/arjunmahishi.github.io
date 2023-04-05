@@ -1,8 +1,10 @@
 ---
 title: "Initialization Loop in Golang"
-date: 2021-08-22T10:00:00+05:30
+date: "2021-08-22"
 tags: [ golang ]
 ---
+
+# Initialization Loop in Golang
 
 A couple of days ago, I was writing a program in Go and ran into an `initialization loop`. I was able to quickly fix it with 1 google search which landed on [this StackOverflow question](https://stackoverflow.com/questions/51667411/initialization-loop-golang). But it didn't explain **what** an init loop is and **why** it occurs. So, this post is an attempt to explain the what and the why.
 
