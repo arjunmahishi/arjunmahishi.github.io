@@ -18,7 +18,7 @@ export default function Listing({ data, urlPrefix, title }) {
                 </Link>
               </div>
 
-              <span className="flex hidden lg:block">{item.date}</span>
+              <span className="flex hidden lg:block lg:mt-1">{item.date}</span>
             </li>
           )
         })}

@@ -8,7 +8,7 @@ _(Mar 2023)_
 
 A CLI tool to generate a pseudo-random stream of open metrics data for debugging prometheus based time series databases
 
-Github: https://github.com/arjunmahishi/randOME
+Github: [https://github.com/arjunmahishi/randOME](https://github.com/arjunmahishi/randOME)
 
 ---
 
@@ -22,7 +22,7 @@ details with the UX of neovim. I built this plugin because I thought the idea
 was cool. This may seem like a bad idea at first. But some things like, slicing
 and dicing logs, reading config files with interpolated values
 
-Github: https://github.com/arjunmahishi/k8s.nvim
+Github: [https://github.com/arjunmahishi/k8s.nvim](https://github.com/arjunmahishi/k8s.nvim)
 
 ---
 
@@ -36,7 +36,7 @@ work in progress**. It is not at all usable for now. I am trying to bake in a
 lot of suggestions/auto-complete to improve the UX of **exploring** metrics. If
 this works, it could be a great alternative to using grafana's metrics explorer
 
-Github: https://github.com/arjunmahishi/pxp
+Github: [https://github.com/arjunmahishi/pxp](https://github.com/arjunmahishi/pxp)
 
 ---
 
@@ -48,7 +48,7 @@ A lightweight neovim plugin to quickly run a snippet of code (in the context of 
 file you're editing) without ever leaving neovim. Gives you a slight boost in productivity by
 helping you automate parts of your development workflow. Has a pretty cool integration with telescope
 
-Github: https://github.com/arjunmahishi/flow.nvim
+Github: [https://github.com/arjunmahishi/flow.nvim](https://github.com/arjunmahishi/flow.nvim)
 
 ---
 
@@ -59,7 +59,7 @@ _(Sept 2020)_
 A very minimal loadbalancer built from scratch in Go. This was build only to
 learn how load balancers work and also to exercise some Go skills
 
-Github: https://github.com/arjunmahishi/loadbalancer-in-go
+Github: [https://github.com/arjunmahishi/loadbalancer-in-go](https://github.com/arjunmahishi/loadbalancer-in-go)
 
 ---
 
@@ -69,7 +69,7 @@ _(Oct 2020)_
 
 A web app to practice and measure your typing speed. I worked on this to learn React :P
 
-Github: https://github.com/arjunmahishi/type-test
+Github: [https://github.com/arjunmahishi/type-test](https://github.com/arjunmahishi/type-test)
 
 ---
 
@@ -81,7 +81,7 @@ A simple HTTP server that echos all requests it receives. Useful for manually
 testing outbound HTTP requests of an application. Additionally, it can also be
 configured to send custom responses for the requests it receives
 
-Github: https://github.com/arjunmahishi/guineapig
+Github: [https://github.com/arjunmahishi/guineapig](https://github.com/arjunmahishi/guineapig)
 
 ---
 
@@ -94,7 +94,7 @@ getting detained (< 75% attendance). This app had become pretty viral in our
 collage. It also had other features like viewing your timetable, exam results
 etc (the official collage website sucked)
 
-Github: https://github.com/xlogix/instify
+Github: [https://github.com/xlogix/instify](https://github.com/xlogix/instify)
 
 ---
 
@@ -106,7 +106,7 @@ A python script that generates Major/Minor chord progressions any key of
 choice. Dont judge the code, this is one of the first pieces of proper code I
 wrote :P
 
-Github: https://github.com/arjunmahishi/chord-progression-generator
+Github: [https://github.com/arjunmahishi/chord-progression-generator](https://github.com/arjunmahishi/chord-progression-generator)
 
 ---
 

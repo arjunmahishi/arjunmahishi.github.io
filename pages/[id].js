@@ -5,7 +5,6 @@ import { getMDContent } from '../lib/home';
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { id: '' } },
       { params: { id: 'about' } },
       { params: { id: 'projects' } },
     ],
