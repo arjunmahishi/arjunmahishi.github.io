@@ -1,1 +1,0 @@
-self.__SSG_MANIFEST=new Set(["\u002F[id]","\u002Fposts","\u002Fposts\u002F[id]","\u002Fvim-adventures","\u002Fvim-adventures\u002F[id]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
