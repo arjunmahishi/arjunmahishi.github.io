@@ -1,10 +1,48 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import Layout from '../components/layout';
 import Nav from '../components/nav';
 import Social from '../components/social';
 
-export default function Home() {
+import { getAllPosts } from '../lib/posts';
+
+export async function getStaticProps() {
+  const socialLinks = [
+    {
+      link: "https://www.linkedin.com/in/arjun-mahishi-b18968126/",
+      type: "linkedin",
+      text: "Arjun Mahishi"
+    },
+    {
+      link: "https://twitter.com/arjunmahishi",
+      type: "twitter",
+      text: "@arjunmahishi"
+    },
+    {
+      link: "https://github.com/arjunmahishi",
+      type: "github",
+      text: "arjunmahishi"
+    },
+    {
+      link: "https://www.youtube.com/@arjunmahishi.mp3",
+      type: "youtube",
+      text: "@arjunmahishi.mp3"
+    }
+  ]
+
+  const allPostsData = getAllPosts();
+  return {
+    props: {
+      allPostsData,
+      socialLinks,
+    },
+  };
+}
+
+export default function Home({ allPostsData, socialLinks }) {
+  const latestPost = allPostsData[0];
+
   return (
     <Layout>
       <Nav />
@@ -16,30 +54,26 @@ export default function Home() {
           className="rounded-full" />
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-center lg:mt-10 items-center">
-        <Social
-          className="lg:p-2"
-          link="https://www.linkedin.com/in/arjun-mahishi-b18968126/"
-          type="linkedin"
-          text="Arjun Mahishi"/>
+      <span className="text-center text-gray-500 text-lg mt-5">
+        <Link href={`/posts/${latestPost.id}`} className="flex">
+          Read my latest blog post →
+        </Link>
+        <Link href="https://github.com/arjunmahishi/dotfiles" className="flex">
+          Checkout my .dotfiles →
+        </Link>
+      </span>
 
-        <Social
-          className="lg:p-2"
-          link="https://twitter.com/arjunmahishi"
-          type="twitter"
-          text="@arjunmahishi" />
-
-        <Social
-          className="lg:p-2"
-          link="https://github.com/arjunmahishi"
-          type="github"
-          text="arjunmahishi"/>
-
-        <Social
-          className="lg:p-2"
-          link="https://www.youtube.com/@arjunmahishi.mp3"
-          type="youtube"
-          text="@arjunmahishi.mp3"/>
+      <div className="flex flex-row justify-center mt-5 lg:mt-10 items-center">
+        {socialLinks.map((sobj) => {
+          return (
+            <Social 
+              className="lg:p-2"
+              key={sobj.type}
+              link={sobj.link}
+              type={sobj.type}
+              text={sobj.text} />
+          )
+        })}
       </div>
 
     </Layout>

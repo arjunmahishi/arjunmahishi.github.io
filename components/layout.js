@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Head from "next/head";
 
 export default function Layout({ children, meta }) {
@@ -20,6 +21,12 @@ export default function Layout({ children, meta }) {
       </Head>
 
       <div className="grid place-items-center">{children}</div>
+
+      <footer className="text-center text-gray-500 text-sm mt-5 pb-2">
+        Built from scratch with {" "}
+        <Link href="https://nextjs.org/" className="underline decoration-dashed underline-offset-4 decoration-2">Next.js</Link> and {" "}
+        <Link href="https://tailwindcss.com/" className="underline decoration-dashed underline-offset-4 decoration-2">Tailwind CSS</Link>
+      </footer>
     </>
   )
 }

@@ -17,7 +17,6 @@ export default function Social({ link, type, text, className }) {
       <Image src={`/img/${type}.svg`}
         alt={type}
         width={width} height={height} />
-      {text}
     </Link>
   )
 }
