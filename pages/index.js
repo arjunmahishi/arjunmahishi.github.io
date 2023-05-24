@@ -41,7 +41,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData, socialLinks }) {
-  const latestPost = allPostsData[0];
+  const latestPostURL = allPostsData[0].url ? allPostsData[0].url : `/posts/${allPostsData[0].id}`
 
   return (
     <Layout>
@@ -55,7 +55,7 @@ export default function Home({ allPostsData, socialLinks }) {
       </div>
 
       <span className="text-center text-gray-500 text-lg mt-5">
-        <Link href={`/posts/${latestPost.id}`} className="flex">
+        <Link href={latestPostURL} className="flex">
           Read my latest blog post →
         </Link>
         <Link href="https://github.com/arjunmahishi/dotfiles" className="flex">

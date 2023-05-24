@@ -10,10 +10,12 @@ export default function Listing({ data, urlPrefix, title }) {
 
       <ul className="list-disc mt-4 lg:mt-8">
         {data.map((item, i) => {
+          const url = item.url ? item.url : `/${urlPrefix}/${item.id}`
+
           return (
             <li className="h-14 flex flex-row" key={i}>
               <div className="flex flex-row flex-grow">
-                <Link href={`/${urlPrefix}/${item.id}`} className="underline decoration-dashed underline-offset-4 decoration-2">
+                <Link href={url} className="underline decoration-dashed underline-offset-4 decoration-2">
                   <h2 className="text-md lg:text-xl">{item.title}</h2>
                 </Link>
               </div>
