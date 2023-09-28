@@ -4,8 +4,6 @@ date: "2020-01-28"
 tags: [ golang, tools, good-practices ]
 ---
 
-# Using Golang's Stringer tool
-
 **Straight from the documentation:**
 >
 > Stringer is a tool to automate the creation of methods that satisfy the fmt.Stringer interface. Given the name of a (signed or unsigned) integer type T that has constants defined, stringer will create a new self-contained Go source file implementing:

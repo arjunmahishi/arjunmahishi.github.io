@@ -4,8 +4,6 @@ date: "2021-07-11"
 tags: [ vim ]
 ---
 
-# Tapping into the system clipboard
-
 ### TL;DR
 
 ```vim

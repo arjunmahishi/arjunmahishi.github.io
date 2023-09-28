@@ -4,8 +4,6 @@ date: "2021-10-10"
 tags: [ vim ]
 ---
 
-# Prettify JSON in Vim
-
 ### TL;DR
 
 ```vim
