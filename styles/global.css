@@ -24,3 +24,7 @@
 nav {
   margin-top: 10px;
 }
+
+.toc-level {
+  line-height: 1rem;
+}
