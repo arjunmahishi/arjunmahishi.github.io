@@ -3,8 +3,6 @@ title: "Remote Write Dummy Metrics"
 date: "2022-08-31"
 ---
 
-# Remote Write Dummy Metrics
-
 While working on any system built on top of prometheus based storage, you might
 want to use dummy data for testing. But prometheus based storages (prometheus,
 victoriaMetrics, m3db etc) don’t support “insert” queries like SQL. So, this

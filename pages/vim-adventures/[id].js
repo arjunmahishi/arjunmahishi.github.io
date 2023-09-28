@@ -1,7 +1,5 @@
-import Layout from "../../components/layout";
-import Nav from "../../components/nav";
-
 import { getPostData, getAllPostIds } from "../../lib/posts";
+import Article from "../../components/article";
 
 export async function getStaticPaths() {
   const paths = getAllPostIds('vim-adventures');
@@ -23,13 +21,5 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Post({ postData }) {
-  return (
-    <Layout meta={postData}>
-      <Nav />
-
-      <article
-          className="prose lg:max-w-2xl lg:prose-lg px-8 m-auto my-4 sm:my-16 prose-img:rounded-xl"
-          dangerouslySetInnerHTML={{ __html: postData.contentHTML }} />
-    </Layout>
-  );
+  return <Article postData={postData} />;
 }
