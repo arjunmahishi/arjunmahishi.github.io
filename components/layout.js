@@ -30,6 +30,12 @@ export default function Layout({ children, meta }) {
         <link rel="icon" href="/favicon.ico" />
 
         <meta name="description" content={meta.description || "Arjun Mahishi's personal website"} />
+        <meta property="og:title" content={meta.title || "Arjun Mahishi"} />
+        <meta property="og:description" content={meta.description || ""} />
+        <meta property="og:image" content={meta.image || "/img/dp.jpg"} />
+        <meta property="og:url" content={meta.url || "https://arjunmahishi.me"} />
+        <meta property="og:type" content="blog"/>
+        <meta name="twitter:card" content="summary_large_image" />
 
         <link
           rel="preload"
