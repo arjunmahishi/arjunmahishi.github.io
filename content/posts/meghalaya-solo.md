@@ -59,7 +59,7 @@ realize that airport buses are more economical and predictable than cabs. The
 bus ticket to the airport cost me ₹255. Whereas a cab would have easily been
 more than ₹1000.
 
-I got the see Terminal 2 of the Bangalore International Airport after a while.
+I got to see Terminal 2 of the Bangalore International Airport after a while.
 It looks beautiful. Terminal 2 itself looks like a vacation destination.
 
 ![terminal 2](https://i.imgur.com/F2EwNTW.jpg)

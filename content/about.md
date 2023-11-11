@@ -9,7 +9,7 @@ building block in a bigger script ⚙️, a link in a chain of shell commands �
 run independently on its own 🚀. Building such tools comes with its own set of
 exciting challenges and is an art in itself
 
-I am currently doing exactly that at [Last9](https://last9.io/) 🏢
+I am currently helping build observability integrations at [Cockroach Labs](https://www.cockroachlabs.com/).
 
 Also, I obsessively keep tweaking my vim + tmux setup 🔨. If you use/want to use
 either of these, we will get along pretty well 🤝🏽
