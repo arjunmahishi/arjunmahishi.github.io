@@ -10,13 +10,22 @@ export default function BlogIndex({}) {
     <Layout meta={{ title: "Maps" }}>
       <Nav />
 
-      <div className="flex flex-col items-center justify-center mt-20">
-        <iframe
-          src={`https://www.google.com/maps/d/embed?mid=1Gm7xu7Q9hJXPW7yO82KXDHkqPwIBggo&ehbc=2E312F${profileQuery}`}
-          width="640"
-          height="480">
-        </iframe>
-      </div>
+    <div id="map-holder" style={{
+      marginTop: "4rem", width: "100%", height: "36rem",
+    }}>
+      <iframe
+        src={`https://www.google.com/maps/d/embed?mid=1Gm7xu7Q9hJXPW7yO82KXDHkqPwIBggo&ehbc=2E312F${profileQuery}`}
+        style={{
+          position: 'relative',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          border: 0
+        }} >
+      </iframe>
+    </div>
+
     </Layout>
   );
 }
