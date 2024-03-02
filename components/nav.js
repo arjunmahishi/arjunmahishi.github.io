@@ -6,24 +6,24 @@ export default function Nav() {
     { title: 'Projects', href: '/projects' },
     { title: 'Blog', href: '/posts' },
     { title: 'Vim-Adventures', href: '/vim-adventures' },
-    { title: 'Trekking map', href: '/maps' },
+    { title: 'Maps', href: '/maps' },
   ]
 
 
   return (
-    <nav className="flex flex-col lg:flex-row lg:w-2/3 place-items-center lg:place-items-start">
-      <div className="text-2xl">
+    <div className="flex flex-col items-center">
+      <h1 className="text-center text-4xl font-bold mb-4">
         <Link className="underline decoration-2 underline-offset-4" href="/">ಅರ್ಜುನ್ ಮಹಿಷಿ</Link>
-      </div>
-      <div className="flex grow justify-end mt-2 lg:mt-0">
-        <ul className="p-1">
+      </h1>
+      <nav>
+        <ul className="flex flex-wrap justify-center gap-2">
           {navItems.map((item, i) => {
             return <li className="mx-2 inline-block align-text-bottom" key={i}>
               <Link className="underline underline-offset-4 decoration-2" href={item.href}>{item.title}</Link>
             </li>
           })}
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   )
 }
