@@ -16,7 +16,7 @@ export default function Listing({ data, urlPrefix, title }) {
             <li className="h-14 flex flex-row" key={i}>
               <div className="flex flex-row flex-grow">
                 <Link href={url} className="underline decoration-dashed underline-offset-4 decoration-2">
-                  <h2 className="text-md lg:text-xl">{item.title}</h2>
+                  <h2 className="text-md lg:text-xl">{item.title}{ item.draft ? " [DRAFT]" : ""}</h2>
                 </Link>
               </div>
 
