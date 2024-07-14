@@ -8,17 +8,18 @@ export default function Article({ postData }) {
     <Layout meta={postData}>
       <Nav />
 
-      <div className="prose lg:max-w-2xl lg:prose-lg px-8 m-auto my-4 sm:my-16 prose-img:rounded-xl">
-        <h1 className="">{postData.title}</h1>
-      </div>
+	  <div className="prose lg:max-w-2xl px-8 m-auto my-4 sm:my-8">
+	  	<h1 className="text-4xl font-bold mb-4 border-b pb-2">{postData.title}</h1>
+	  </div>
 
-      <img
-          src={postData.image} alt={postData.title} className="lg:max-w-3xl rounded-xl"
-          style={{ display: showImage ? "block" : "none" }} />
+	  <img
+	    src={postData.image} alt={postData.title} className="lg:max-w-3xl rounded-xl"
+	    style={{ display: showImage ? "block" : "none" }} />
 
-      <article
-          className="prose lg:max-w-2xl lg:prose-lg px-8 m-auto my-4 sm:my-16 prose-img:rounded-xl"
-          dangerouslySetInnerHTML={{ __html: postData.contentHTML }} />
+	  <article
+	    className="prose lg:max-w-2xl px-8 m-auto mb-4 sm:mb-8 leading-relaxed text-gray-800"
+	    dangerouslySetInnerHTML={{ __html: postData.contentHTML }} />
+
     </Layout>
   );
 }
