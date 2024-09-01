@@ -1,1 +1,1 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+Handmade using [Next.js](https://nextjs.org) and [Tailwind CSS](https://tailwindcss.com)

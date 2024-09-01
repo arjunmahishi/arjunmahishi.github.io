@@ -9,10 +9,10 @@ building block in a bigger script ⚙️, a link in a chain of shell commands �
 run independently on its own 🚀. Building such tools comes with its own set of
 exciting challenges and is an art in itself
 
-I am currently helping build observability integrations at [Cockroach Labs](https://www.cockroachlabs.com/).
+I am currently working on observability at [Cockroach Labs](https://www.cockroachlabs.com/).
 
-Also, I obsessively keep tweaking my vim + tmux setup 🔨. If you use/want to use
-either of these, we will get along pretty well 🤝🏽
+Also, I obsessively keep tweaking my neovim + tmux setup 🔨. If you use/want to use
+either of these tools, we will get along pretty well 🤝🏽
 
 ---
 
@@ -21,6 +21,6 @@ to music 🎵. I've been playing the guitar since I was 11 🎸. I am no David G
 but over the years I've gotten comfortable enough with the instrument to
 replicate what I hear and put my spin on it 👾.
 
-For the past couple of years, I've been experimenting with electronic music. I
+For the past couple of years, I've been experimenting with electronic music too. I
 use a little 2 Octave MIDI keyboard to sample sounds and create music out of it 🎹.
 This combined with the guitar is my favorite pass time.

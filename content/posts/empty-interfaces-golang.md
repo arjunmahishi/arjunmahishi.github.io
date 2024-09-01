@@ -2,9 +2,8 @@
 title: "Returning empty interfaces in Golang"
 date: "2022-01-08"
 tags: [golang, good-practices]
+image: "https://i.imgur.com/qX0N1Bg.png"
 ---
-
-![returning-empty-interfaces-golang](https://i.imgur.com/qX0N1Bg.png)
 
 This week I ran into a bug with an empty `interface{}` which highlighted a smell in the code. This post describes what the bug is, how I fixed it, and the lessons learned.
 
