@@ -27,9 +27,13 @@ export default function Home({ data }) {
     <Layout>
       <Nav />
 
+      <div className="prose lg:max-w-3xl lg:px-0 px-8 my-4 sm:my-8">
+        <h1 className="text-4xl font-bold">{data.title}</h1>
+      </div>
+
       <article
-          className="prose lg:max-w-2xl lg:prose-lg px-8 m-auto my-4 sm:my-16 prose-img:rounded-xl"
-          dangerouslySetInnerHTML={{ __html: data.contentHTML }} />
+        className="prose lg:max-w-3xl lg:px-0 px-8 mb-4 sm:mb-8 leading-relaxed text-gray-800"
+        dangerouslySetInnerHTML={{ __html: data.contentHTML }} />
     </Layout>
   )
 }

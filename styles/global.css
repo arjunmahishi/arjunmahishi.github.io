@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  margin: auto;
+  max-width: 800px;
+}
+
 .wave {
   animation-name: wave-animation;
   animation-duration: 2s;

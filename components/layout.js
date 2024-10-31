@@ -34,7 +34,7 @@ export default function Layout({ children, meta }) {
         <meta property="og:description" content={meta.description || ""} />
         <meta property="og:image" content={meta.image || "/img/dp.jpg"} />
         <meta property="og:url" content={meta.url || "https://arjunmahishi.me"} />
-        <meta property="og:type" content="blog"/>
+        <meta property="og:type" content="blog" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@arjunmahishi" />
@@ -52,11 +52,11 @@ export default function Layout({ children, meta }) {
       </Head>
 
       <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-857DV9833V" />
-      <Script
-        id='google-analytics'
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
+      <Script
+        id='google-analytics'
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -64,10 +64,10 @@ export default function Layout({ children, meta }) {
               page_path: window.location.pathname,
             });
           `,
-        }}
-      />
+        }}
+      />
 
-      <div className="grid place-items-center">{children}</div>
+      <div className="grid">{children}</div>
 
       <footer className="text-center text-gray-500 text-sm mt-5 pb-2">
         Built from scratch with {" "}

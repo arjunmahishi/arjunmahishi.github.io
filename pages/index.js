@@ -47,9 +47,9 @@ export default function Home({ allPostsData, socialLinks }) {
     <Layout>
       <Nav />
 
-      <div className="flex flex-col items-center justify-center py-2 mt-10">
+      <div className="flex flex-col py-2 mt-10">
         <Image src="/img/dp.jpg"
-          alt="Arjun Mahishi" 
+          alt="Arjun Mahishi"
           width={400} height={400}
           className="rounded-full" />
       </div>
@@ -63,10 +63,10 @@ export default function Home({ allPostsData, socialLinks }) {
         </Link>
       </span>
 
-      <div className="flex flex-row justify-center mt-5 lg:mt-10 items-center">
+      <div className="flex flex-row mt-5 lg:mt-10 items-center">
         {socialLinks.map((sobj) => {
           return (
-            <Social 
+            <Social
               className="lg:p-2"
               key={sobj.type}
               link={sobj.link}
