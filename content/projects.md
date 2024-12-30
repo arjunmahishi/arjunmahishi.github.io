@@ -1,6 +1,17 @@
-# Side projects
+---
+title: "Side projects"
+---
 
 _(from latest to oldest)_
+
+### [md-to-pdf](https://github.com/arjunmahishi/md-to-pdf)
+
+_(Dec 2024)_
+
+This is a simple browser based tool to convert markdown to PDF. You can control
+how the PDF looks by tweaking the available styling options.
+
+Github: [https://github.com/arjunmahishi/md-to-pdf](https://github.com/arjunmahishi/md-to-pdf)
 
 ### [randOME](https://github.com/arjunmahishi/randOME)
 

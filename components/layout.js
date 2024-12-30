@@ -67,7 +67,7 @@ export default function Layout({ children, meta }) {
         }}
       />
 
-      <div className="grid">{children}</div>
+      {children}
 
       <footer className="text-center text-gray-500 text-sm mt-5 pb-2">
         Built from scratch with {" "}
