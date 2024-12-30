@@ -28,11 +28,20 @@ command:
 go install github.com/go-delve/delve/cmd/dlv@latest
 ```
 
-### Sample Go program
-
 ### Running the program with delve
 
 #### Running with arguments
 
 ### Attaching to a running process
 
+### Debugging go routines
+
+### Interactions in the debugger
+
+#### Setting breakpoints
+
+#### Printing variables
+
+#### Stepping through code
+
+#### Mutating variable values
