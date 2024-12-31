@@ -24,7 +24,7 @@ export default function Article({ postData }) {
         style={{ display: showImage ? "block" : "none" }} />
 
       <article
-        className="prose lg:max-w-3xl lg:px-0 px-8 mb-4 sm:mb-8 leading-relaxed text-gray-800"
+        className="prose lg:max-w-3xl lg:px-0 px-8 mb-4 sm:mb-8 leading-relaxed text-gray-800 mt-10"
         dangerouslySetInnerHTML={{ __html: postData.contentHTML }} />
 
     </Layout>
