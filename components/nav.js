@@ -6,6 +6,7 @@ export default function Nav() {
     { title: 'Projects', href: '/projects' },
     { title: 'Blog', href: '/posts' },
     { title: 'Vim-Adventures', href: '/vim-adventures' },
+    { title: 'Guitar Tabs', href: '/tabs' },
     { title: 'Maps', href: '/maps' },
   ]
 
