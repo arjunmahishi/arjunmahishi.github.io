@@ -51,22 +51,6 @@ export default function Layout({ children, meta }) {
         <link href="/gruvbox.css" rel="stylesheet" />
       </Head>
 
-      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-857DV9833V" />
-      <Script
-        id='google-analytics'
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-857DV9833V', {
-              page_path: window.location.pathname,
-            });
-          `,
-        }}
-      />
-
       {children}
 
       <footer className="text-center text-gray-500 text-sm mt-5 pb-2">
