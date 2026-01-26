@@ -30,14 +30,15 @@
   "browser": {
     "crypto": false,
     "fs": false,
-    "path": false,
-    "os": false,
     "net": false,
+    "os": false,
+    "path": false,
     "stream": false,
     "tls": false
   },
   "devDependencies": {
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4"
-  }
+  },
+  "packageManager": "yarn@4.9.1"
 }
