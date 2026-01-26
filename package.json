@@ -1,5 +1,6 @@
 {
   "private": true,
+  "packageManager": "yarn@4.9.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -39,6 +40,5 @@
   "devDependencies": {
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4"
-  },
-  "packageManager": "yarn@4.9.1"
+  }
 }
