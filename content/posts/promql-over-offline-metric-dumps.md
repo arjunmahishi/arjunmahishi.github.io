@@ -3,7 +3,7 @@ title: "PromQL over offline metric dumps"
 date: "2026-07-26"
 tags: [golang, observability, promql]
 toc: true
-draft: true
+image: /img/promql-over-offline-metric-dumps/hero.png
 ---
 
 A few months ago, on the first day of a "breather week" (a week we get every few

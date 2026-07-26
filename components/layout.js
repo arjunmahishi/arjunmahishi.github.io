@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from "react";
 
 import * as gtag from "../lib/gtag"
+import { absoluteImageUrl } from "../lib/image"
 
 export default function Layout({ children, meta }) {
   const router = useRouter();
@@ -32,7 +33,7 @@ export default function Layout({ children, meta }) {
         <meta name="description" content={meta.description || "Arjun Mahishi's personal website"} />
         <meta property="og:title" content={meta.title || "Arjun Mahishi"} />
         <meta property="og:description" content={meta.description || ""} />
-        <meta property="og:image" content={meta.image || "/img/dp.jpg"} />
+        <meta property="og:image" content={absoluteImageUrl(meta.image || "/img/dp.jpg")} />
         <meta property="og:url" content={meta.url || "https://arjunmahishi.me"} />
         <meta property="og:type" content="blog" />
 
@@ -41,14 +42,12 @@ export default function Layout({ children, meta }) {
         <meta name="twitter:creator" content="@arjunmahishi" />
         <meta name="twitter:title" content={meta.title || "Arjun Mahishi"} />
         <meta name="twitter:description" content={meta.description || ""} />
-        <meta name="twitter:image" content={meta.image || "/img/dp.jpg"} />
+        <meta name="twitter:image" content={absoluteImageUrl(meta.image || "/img/dp.jpg")} />
 
         <link
           rel="preload"
           href="https://unpkg.com/prismjs@0.0.1/themes/prism-okaidia.css"
           as="script" />
-
-        <link href="/gruvbox.css" rel="stylesheet" />
       </Head>
 
       {children}
