@@ -52,11 +52,12 @@ export default function Layout({ children, meta }) {
 
       {children}
 
-      <footer className="text-center text-gray-500 text-sm mt-5 pb-2">
-        Built from scratch with {" "}
-        <Link href="https://nextjs.org/" className="underline decoration-dashed underline-offset-4 decoration-2">Next.js</Link> and {" "}
-        <Link href="https://tailwindcss.com/" className="underline decoration-dashed underline-offset-4 decoration-2">Tailwind CSS</Link>
-      </footer>
+      {router.pathname !== "/" && (
+        <footer className="text-center text-gray-500 text-sm mt-5 pb-2">
+          Get in touch:{" "}
+          <a href="https://twitter.com/arjunmahishi" className="underline decoration-dashed underline-offset-4 decoration-2">@arjunmahishi</a>
+        </footer>
+      )}
     </>
   )
 }
