@@ -3,7 +3,6 @@ import Link from 'next/link'
 export default function Nav() {
   const navItems = [
     { title: 'About', href: '/about' },
-    { title: 'Projects', href: '/projects' },
     { title: 'Blog', href: '/posts' },
     { title: 'Guitar Tabs', href: '/tabs' },
     { title: 'Maps', href: '/maps' },
