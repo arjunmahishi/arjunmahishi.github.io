@@ -1,5 +1,6 @@
 import Layout from "./layout";
 import Nav from "./nav";
+import AudioPlayer from "./audio-player";
 
 export default function Article({ postData }) {
   const showImage = postData.image && postData.image.length > 0;
@@ -18,6 +19,12 @@ export default function Article({ postData }) {
         <span>{postData.date}</span>
         <span>{postData.readTime}</span>
       </div>
+
+      {postData.audio && (
+        <div className="lg:max-w-3xl lg:px-0 px-8">
+          <AudioPlayer src={postData.audio} />
+        </div>
+      )}
 
       <img
         src={postData.image} alt={postData.title} className="lg:max-w-3xl rounded-xl mb-4"
