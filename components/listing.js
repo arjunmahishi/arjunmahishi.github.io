@@ -2,25 +2,25 @@ import Link from 'next/link'
 
 export default function Listing({ data, urlPrefix, title }) {
   return (
-    <div className="place-items-left px-8 lg:px-0 mt-10 lg:mt-20">
+    <div className="container-main mt-10 lg:mt-20">
 
       <div className="flex flex-row">
         <h1 className="text-2xl lg:text-4xl font-bold">{title}</h1>
       </div>
 
-      <ul className="list-disc mt-4 lg:mt-8">
+      <ul className="mt-6 lg:mt-10 space-y-1">
         {data.map((item, i) => {
           const url = item.url ? item.url : `/${urlPrefix}/${item.id}`
 
           return (
-            <li className="h-14 flex flex-row" key={i}>
+            <li className="flex flex-row items-baseline" key={i}>
               <div className="flex flex-row flex-grow">
-                <Link href={url} className="underline decoration-dashed underline-offset-4 decoration-2">
-                  <h2 className="text-md lg:text-xl">{item.title}{item.draft ? " [DRAFT]" : ""}</h2>
+                <Link href={url} className="link">
+                  <h2 className="text-md lg:text-lg">{item.title}{item.draft ? " [DRAFT]" : ""}</h2>
                 </Link>
               </div>
 
-              <span className="flex hidden lg:block lg:mt-1">{item.date}</span>
+              <span className="text-sm text-gray-400 shrink-0 ml-4">{item.date}</span>
             </li>
           )
         })}

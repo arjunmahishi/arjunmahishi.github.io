@@ -15,10 +15,10 @@ export default function Nav() {
         <Link href="/">ಅರ್ಜುನ್ ಮಹಿಷಿ</Link>
       </h1>
       <nav className="flex justify-center">
-        <ul className="flex gap-5">
+        <ul className="flex gap-5 text-gray-600">
           {navItems.map((item, i) => {
             return <li key={i}>
-              <Link className="underline underline-offset-4 decoration-2" href={item.href}>{item.title}</Link>
+              <Link className="link font-medium" href={item.href}>{item.title}</Link>
             </li>
           })}
         </ul>

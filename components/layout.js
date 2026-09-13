@@ -53,9 +53,9 @@ export default function Layout({ children, meta }) {
       {children}
 
       {router.pathname !== "/" && (
-        <footer className="text-center text-gray-500 text-sm mt-5 pb-2">
+        <footer className="text-center text-gray-400 text-sm mt-12 pb-6">
           Get in touch:{" "}
-          <a href="https://twitter.com/arjunmahishi" className="underline decoration-dashed underline-offset-4 decoration-2">@arjunmahishi</a>
+          <a href="https://twitter.com/arjunmahishi" className="link">@arjunmahishi</a>
         </footer>
       )}
     </>

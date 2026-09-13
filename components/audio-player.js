@@ -107,15 +107,15 @@ export default function AudioPlayer({ src }) {
   const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div className="my-6 border border-black rounded-lg px-3 py-2">
+    <div className="my-6 border border-gray-200 rounded-lg px-3 py-2">
       <audio ref={audioRef} src={src} preload="metadata" />
 
-      <div className="text-xs text-black mb-1.5">Listen to this post</div>
+      <div className="text-xs text-gray-500 mb-1.5">Listen to this post</div>
 
       <div className="flex items-center gap-3">
         <button
           onClick={togglePlay}
-          className="flex items-center justify-center w-8 h-8 text-black hover:opacity-70 transition-opacity shrink-0"
+          className="flex items-center justify-center w-8 h-8 text-gray-700 hover:opacity-70 transition-opacity shrink-0"
           aria-label={playing ? "Pause" : "Play"}
         >
           {playing ? (
@@ -130,7 +130,7 @@ export default function AudioPlayer({ src }) {
           )}
         </button>
 
-        <span className="text-xs text-black tabular-nums shrink-0 w-[50px]">
+        <span className="text-xs text-gray-500 tabular-nums shrink-0 w-[50px]">
           {formatTime(currentTime)}
         </span>
 
@@ -142,19 +142,19 @@ export default function AudioPlayer({ src }) {
           onTouchStart={onDragStart}
         >
           <div
-            className="h-full bg-black rounded-full absolute top-0 left-0"
+            className="h-full bg-gray-700 rounded-full absolute top-0 left-0"
             style={{ width: `${progress}%` }}
           />
         </div>
 
-        <span className="text-xs text-black tabular-nums shrink-0 w-[50px] text-right">
+        <span className="text-xs text-gray-500 tabular-nums shrink-0 w-[50px] text-right">
           {formatTime(duration)}
         </span>
 
         <select
           value={speed}
           onChange={(e) => setPlaybackSpeed(parseFloat(e.target.value))}
-          className="text-xs bg-transparent text-black cursor-pointer focus:outline-none appearance-none shrink-0"
+          className="text-xs bg-transparent text-gray-500 cursor-pointer focus:outline-none appearance-none shrink-0"
           aria-label="Playback speed"
         >
           {SPEEDS.map((s) => (

@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: auto;
-  max-width: 800px;
+@layer base {
+  body {
+    @apply antialiased text-gray-800 bg-white;
+  }
+}
+
+@layer components {
+  .container-main {
+    @apply max-w-3xl mx-auto px-6;
+  }
+
+  .link {
+    @apply underline decoration-1 underline-offset-2 decoration-gray-400 hover:decoration-accent transition-colors;
+  }
 }
 
 .wave {
@@ -24,10 +35,6 @@ body {
    50% { transform: rotate(10.0deg) }
    60% { transform: rotate( 0.0deg) }
   100% { transform: rotate( 0.0deg) }
-}
-
-nav {
-  margin-top: 10px;
 }
 
 .toc-level {

@@ -10,28 +10,28 @@ export default function Article({ postData }) {
     <Layout meta={postData}>
       <Nav />
 
-      <div className="flex mt-10 mb-7 justify-center">
-        <h1 className="text-4xl font-bold">{postData.title}</h1>
+      <div className="container-main mt-10 mb-7">
+        <h1 className="text-4xl font-bold text-center">{postData.title}</h1>
       </div>
 
-      <div className="flex lg:px-0 px-8 justify-between mb-4 border-b border-dashed border-gray-300"
+      <div className="container-main flex justify-between mb-4 border-b border-dashed border-gray-200"
         style={{ display: showDateAndReadTime ? "flex" : "none" }}>
-        <span>{postData.date}</span>
-        <span>{postData.readTime}</span>
+        <span className="text-gray-500">{postData.date}</span>
+        <span className="text-gray-500">{postData.readTime}</span>
       </div>
 
       {postData.audio && (
-        <div className="lg:max-w-3xl lg:px-0 px-8">
+        <div className="container-main">
           <AudioPlayer src={postData.audio} />
         </div>
       )}
 
       <img
-        src={postData.image} alt={postData.title} className="lg:max-w-3xl rounded-xl mb-4"
+        src={postData.image} alt={postData.title} className="container-main rounded-xl mb-4"
         style={{ display: showImage ? "block" : "none" }} />
 
       <article
-        className="prose lg:max-w-3xl lg:px-0 px-8 mb-4 sm:mb-8 leading-relaxed text-gray-800 mt-10"
+        className="prose container-main mb-8 leading-relaxed mt-10"
         dangerouslySetInnerHTML={{ __html: postData.contentHTML }} />
 
     </Layout>

@@ -22,18 +22,18 @@ export default function TabArticle({ postData }) {
       <Nav />
 
       {!postData.hideTitle && (
-        <div className="flex mt-10 mb-7 justify-center">
-          <h1 className="text-4xl font-bold">{postData.title}</h1>
+        <div className="container-main mt-10 mb-7">
+          <h1 className="text-4xl font-bold text-center">{postData.title}</h1>
         </div>
       )}
 
       <article
-        className="prose lg:max-w-3xl lg:px-0 px-8 mb-8 leading-relaxed text-gray-800"
+        className="prose container-main mb-8 leading-relaxed"
         dangerouslySetInnerHTML={{ __html: postData.contentHTML }}
       />
 
       {hasVideo && (
-        <div className="lg:max-w-3xl lg:px-0 px-8 mb-8">
+        <div className="container-main mb-8">
           <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
             <iframe
               className="absolute top-0 left-0 w-full h-full rounded-lg"
@@ -47,7 +47,7 @@ export default function TabArticle({ postData }) {
       )}
 
       {hasSvgs && (
-        <div className="lg:max-w-3xl lg:px-0 px-8 mb-8 space-y-4">
+        <div className="container-main mb-8 space-y-4">
           {svgPaths.map((svgPath, index) => (
             <img
               key={index}

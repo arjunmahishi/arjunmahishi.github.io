@@ -47,21 +47,21 @@ export default function Home({ allPostsData, socialLinks }) {
     <Layout>
       <Nav />
 
-      <div className="flex justify-center py-2 mt-10">
+      <div className="container-main flex justify-center py-2 mt-10">
         <Image src="/img/dp.jpg"
           alt="Arjun Mahishi"
           width={400} height={400}
           className="rounded-full" />
       </div>
 
-      <span className="flex flex-col items-center text-gray-500 text-lg mt-5">
-        <Link href={latestPostURL} className="flex">
-          Read my latest blog post →
+      <div className="container-main flex flex-col items-center text-gray-500 text-lg mt-6 space-y-2">
+        <Link href={latestPostURL} className="link">
+          Read my latest blog post &rarr;
         </Link>
-        <Link href="https://github.com/arjunmahishi/dotfiles" className="flex">
-          Checkout my .dotfiles →
+        <Link href="https://github.com/arjunmahishi/dotfiles" className="link">
+          Checkout my .dotfiles &rarr;
         </Link>
-      </span>
+      </div>
 
       <div className="flex flex-row justify-center mt-5 lg:mt-10 items-center">
         {socialLinks.map((sobj) => {

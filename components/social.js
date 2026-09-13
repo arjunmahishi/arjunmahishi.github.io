@@ -12,7 +12,7 @@ export default function Social({ link, type, text, className }) {
 
   return (
     <Link
-      className={`flex flex-row underline decoration-dashed underline-offset-4 decoration-2 ${className || ""}`}
+      className={`flex flex-row ${className || ""}`}
       href={link}>
       <Image src={`/img/${type}.svg`}
         alt={type}
