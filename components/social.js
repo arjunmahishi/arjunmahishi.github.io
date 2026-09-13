@@ -1,22 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Social({ link, type, text, className }) {
-  let width = 32;
-  let height = 32;
-
-  if (type === "linkedin") {
-    width = 30;
-    height = 30;
-  }
-
+export default function Social({ link, type, size = 32 }) {
   return (
-    <Link
-      className={`flex flex-row ${className || ""}`}
-      href={link}>
+    <Link className="flex" href={link}>
       <Image src={`/img/${type}.svg`}
         alt={type}
-        width={width} height={height} />
+        width={size} height={size} />
     </Link>
   )
 }

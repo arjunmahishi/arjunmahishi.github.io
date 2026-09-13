@@ -33,7 +33,7 @@ export default function Layout({ children, meta }) {
         <meta name="description" content={meta.description || "Arjun Mahishi's personal website"} />
         <meta property="og:title" content={meta.title || "Arjun Mahishi"} />
         <meta property="og:description" content={meta.description || ""} />
-        <meta property="og:image" content={absoluteImageUrl(meta.image || "/img/dp.jpg")} />
+        <meta property="og:image" content={absoluteImageUrl(meta.image || "/img/dp.webp")} />
         <meta property="og:url" content={meta.url || "https://arjunmahishi.me"} />
         <meta property="og:type" content="blog" />
 
@@ -42,7 +42,7 @@ export default function Layout({ children, meta }) {
         <meta name="twitter:creator" content="@arjunmahishi" />
         <meta name="twitter:title" content={meta.title || "Arjun Mahishi"} />
         <meta name="twitter:description" content={meta.description || ""} />
-        <meta name="twitter:image" content={absoluteImageUrl(meta.image || "/img/dp.jpg")} />
+        <meta name="twitter:image" content={absoluteImageUrl(meta.image || "/img/dp.webp")} />
 
         <link
           rel="preload"
