@@ -18,8 +18,15 @@ export default function Home({ allPostsData }) {
     <Layout>
       <Nav home />
 
-      <PostList posts={allPostsData} />
-
+      <main id="main-content" className="container-main" tabIndex={-1}>
+        <section id="writing" aria-labelledby="writing-heading">
+          <div className="section-heading">
+            <h2 id="writing-heading">Writing</h2>
+            <span>Software &amp; other interests</span>
+          </div>
+          <PostList posts={allPostsData} />
+        </section>
+      </main>
     </Layout>
   )
 }

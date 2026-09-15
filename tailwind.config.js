@@ -13,7 +13,11 @@ module.exports = {
         mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
       },
       colors: {
-        accent: '#d97706',
+        paper: 'var(--paper)',
+        ink: 'var(--ink)',
+        muted: 'var(--muted)',
+        rule: 'var(--rule)',
+        accent: 'var(--accent)',
       },
     },
   },

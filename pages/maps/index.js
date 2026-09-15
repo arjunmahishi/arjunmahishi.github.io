@@ -3,28 +3,24 @@ import Layout from '../../components/layout';
 
 const enableProfile = false;
 
-export default function BlogIndex({ }) {
+export default function MapsIndex() {
   let profileQuery = enableProfile ? `` : `&noprof=1`;
 
   return (
     <Layout meta={{ title: "Maps" }}>
       <Nav />
 
-      <div id="map-holder" style={{
-        marginTop: "4rem", width: "100%", height: "36rem",
-      }}>
-        <iframe
-          src={`https://www.google.com/maps/d/embed?mid=1Gm7xu7Q9hJXPW7yO82KXDHkqPwIBggo&ehbc=2E312F${profileQuery}`}
-          style={{
-            position: 'relative',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            border: 0
-          }} >
-        </iframe>
-      </div>
+      <main id="main-content" className="container-main page-content" tabIndex={-1}>
+        <div className="page-heading">
+          <h1 className="page-title">Maps</h1>
+        </div>
+        <div id="map-holder" className="map-frame">
+          <iframe
+            title="Arjun's map"
+            src={`https://www.google.com/maps/d/embed?mid=1Gm7xu7Q9hJXPW7yO82KXDHkqPwIBggo&ehbc=2E312F${profileQuery}`}
+            allowFullScreen />
+        </div>
+      </main>
 
     </Layout>
   );

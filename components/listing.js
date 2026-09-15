@@ -1,30 +1,27 @@
 import Link from 'next/link'
 
-export default function Listing({ data, urlPrefix, title }) {
+export default function Listing({ data, urlPrefix, title, description }) {
   return (
-    <div className="container-main mt-10 lg:mt-20">
-
-      <div className="flex flex-row">
-        <h1 className="text-2xl lg:text-4xl font-bold">{title}</h1>
+    <main id="main-content" className="container-main page-content" tabIndex={-1}>
+      <div className="page-heading">
+        <h1 className="page-title">{title}</h1>
+        {description && <p className="page-description">{description}</p>}
       </div>
 
-      <ul className="mt-6 lg:mt-10 space-y-1">
-        {data.map((item, i) => {
+      <ul className="post-list listing">
+        {data.map((item) => {
           const url = item.url ? item.url : `/${urlPrefix}/${item.id}`
 
           return (
-            <li className="flex flex-row items-baseline" key={i}>
-              <div className="flex flex-row flex-grow">
-                <Link href={url} className="link">
-                  <h2 className="text-md lg:text-lg">{item.title}{item.draft ? " [DRAFT]" : ""}</h2>
-                </Link>
-              </div>
-
-              <span className="text-sm text-gray-400 shrink-0 ml-4">{item.date}</span>
+            <li className="post-list-item" key={item.id}>
+              <Link href={url} className="post-link">
+                <h2>{item.title}{item.draft ? " [DRAFT]" : ""}</h2>
+                <time dateTime={item.date}>{item.date}</time>
+              </Link>
             </li>
           )
         })}
       </ul>
-    </div>
+    </main>
   )
 }

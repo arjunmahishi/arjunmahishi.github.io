@@ -1,70 +1,46 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
-import Social from './social'
-import { socialLinks } from '../lib/social-links'
+import { useRouter } from 'next/router'
 
 const navItems = [
-  { title: 'Blog', href: '/' },
-  { title: 'About', href: '/about' },
-  { title: 'Guitar Tabs', href: '/tabs' },
-  { title: 'Maps', href: '/maps' },
+  { title: 'Writing', href: '/#writing', section: '/posts' },
+  { title: 'About', href: '/about', section: '/about' },
+  { title: 'Guitar Tabs', href: '/tabs', section: '/tabs' },
+  { title: 'Maps', href: '/maps', section: '/maps' },
 ]
 
-function NavLinks() {
-  return (
-    <ul className="flex gap-6">
-      {navItems.map((item, i) => {
-        return <li key={i}>
-          <Link className="link font-medium" href={item.href}>{item.title}</Link>
-        </li>
-      })}
-    </ul>
-  )
-}
-
 export default function Nav({ home = false }) {
-  // Stacked hero layout for the landing page
-  if (home) {
-    return (
-      <div className="container-main mt-16 mb-16 flex flex-col items-center">
-        <div className="flex items-center gap-6">
-          <Image src="/img/dp.webp"
-            alt="Arjun Mahishi"
-            width={160} height={133}
-            className="h-32 lg:h-40 w-auto rounded-xl" />
-          <h1 className="text-4xl lg:text-5xl font-medium">
-            <Link href="/">ಅರ್ಜುನ್ ಮಹಿಷಿ</Link>
-          </h1>
-        </div>
+  const router = useRouter();
+  const pathname = router.asPath.split(/[?#]/)[0];
+  const name = <Link href="/" className="site-name" lang="kn">ಅರ್ಜುನ್ ಮಹಿಷಿ</Link>;
 
-        <ul className="mt-8 flex items-center gap-4">
-          {socialLinks.map((sobj) => {
+  return (
+    <header className={`container-main site-header${home ? ' site-header-home' : ''}`}>
+      {home ? <h1>{name}</h1> : name}
+      <nav aria-label="Main navigation">
+        <ul>
+          {navItems.map((item) => {
+            const active = (home && item.href === '/#writing')
+              || pathname === item.section
+              || pathname.startsWith(`${item.section}/`);
+
             return (
-              <li key={sobj.type}>
-                <Social link={sobj.link} type={sobj.type} size={28} />
+              <li key={item.href}>
+                <Link href={item.href} aria-current={active ? 'location' : undefined}>
+                  {item.title}
+                </Link>
               </li>
             )
           })}
         </ul>
-
-        <nav className="mt-6">
-          <NavLinks />
-        </nav>
-      </div>
-    )
-  }
-
-  // Compact header row for all other pages
-  return (
-    <header className="container-main flex h-24 flex-wrap items-center gap-x-8 gap-y-3">
-      <h1 className="text-2xl font-medium">
-        <Link href="/">ಅರ್ಜುನ್ ಮಹಿಷಿ</Link>
-      </h1>
-
-      <nav className="ml-auto">
-        <NavLinks />
       </nav>
+      {home && (
+        <Image src="/img/dp.webp"
+          alt="Illustrated portrait of Arjun Mahishi at his laptop"
+          width={180} height={150}
+          priority
+          className="home-portrait" />
+      )}
     </header>
   )
 }

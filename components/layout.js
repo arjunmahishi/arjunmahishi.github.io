@@ -1,6 +1,6 @@
-import Link from "next/link";
 import Head from "next/head";
-import Script from 'next/script'
+import Social from './social';
+import { socialLinks } from '../lib/social-links';
 import { useRouter } from 'next/router';
 import { useEffect } from "react";
 
@@ -50,14 +50,21 @@ export default function Layout({ children, meta }) {
           as="script" />
       </Head>
 
-      {children}
+      <div className="site-shell">
+        <a href="#main-content" className="skip-link">Skip to content</a>
+        {children}
 
-      {router.pathname !== "/" && (
-        <footer className="text-center text-gray-400 text-sm mt-12 pb-6">
-          Get in touch:{" "}
-          <a href="https://twitter.com/arjunmahishi" className="link">@arjunmahishi</a>
+        <footer className="container-main site-footer">
+          <p>Elsewhere on the internet <span aria-hidden="true">↗</span></p>
+          <ul aria-label="Social links">
+            {socialLinks.map((social) => (
+              <li key={social.type}>
+                <Social link={social.link} type={social.type} size={20} />
+              </li>
+            ))}
+          </ul>
         </footer>
-      )}
+      </div>
     </>
   )
 }
