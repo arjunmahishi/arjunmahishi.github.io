@@ -4,7 +4,6 @@ import { useRouter } from 'next/router'
 
 const navItems = [
   { title: 'Writing', href: '/#writing', section: '/posts' },
-  { title: 'About', href: '/about', section: '/about' },
   { title: 'Guitar Tabs', href: '/tabs', section: '/tabs' },
   { title: 'Maps', href: '/maps', section: '/maps' },
 ]

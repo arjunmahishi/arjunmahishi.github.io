@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Social from './social';
+import RssLink from './rss-link';
 import { socialLinks } from '../lib/social-links';
 import { useRouter } from 'next/router';
 import { useEffect } from "react";
@@ -29,6 +30,7 @@ export default function Layout({ children, meta }) {
       <Head>
         <title>{meta.title ? `${meta.title} | Arjun Mahishi` : "Arjun Mahishi"}</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="alternate" type="application/rss+xml" title="Arjun Mahishi" href="/feed.xml" />
 
         <meta name="description" content={meta.description || "Arjun Mahishi's personal website"} />
         <meta property="og:title" content={meta.title || "Arjun Mahishi"} />
@@ -57,6 +59,7 @@ export default function Layout({ children, meta }) {
         <footer className="container-main site-footer">
           <p>Elsewhere on the internet <span aria-hidden="true">↗</span></p>
           <ul aria-label="Social links">
+            <li><RssLink /></li>
             {socialLinks.map((social) => (
               <li key={social.type}>
                 <Social link={social.link} type={social.type} size={20} />
