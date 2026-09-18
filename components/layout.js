@@ -29,7 +29,7 @@ export default function Layout({ children, meta }) {
     <>
       <Head>
         <title>{meta.title ? `${meta.title} | Arjun Mahishi` : "Arjun Mahishi"}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/webp" href="/img/dp.webp" />
         <link rel="alternate" type="application/rss+xml" title="Arjun Mahishi" href="/feed.xml" />
 
         <meta name="description" content={meta.description || "Arjun Mahishi's personal website"} />
