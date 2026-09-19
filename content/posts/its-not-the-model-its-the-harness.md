@@ -3,7 +3,8 @@ title: "It's not the model, it's the harness"
 date: "2026-09-19"
 tags: [ai, agents]
 toc: true
-audio: https://pub-9106c7dd622a4625b893684883c7dc2d.r2.dev/thoughts-on-agent-harnesses.mp3
+image: /img/its-not-the-model-its-the-harness/hero.png
+audio: https://pub-9106c7dd622a4625b893684883c7dc2d.r2.dev/its-not-the-model-its-the-harness.mp3
 ---
 
 I've been using coding agents heavily for a while now. I've also had the
@@ -37,7 +38,7 @@ are all harnesses. They provide the model with tools, execute those tools,
 manage context, handle permissions, and decide
 how the whole interaction works.
 
-![The harness connects the user to the LLM, executes tool calls, and returns results to the model.](/img/thoughts-on-agent-harnesses/harness-loop.png)
+![The harness connects the user to the LLM, executes tool calls, and returns results to the model.](/img/its-not-the-model-its-the-harness/harness-loop.png)
 
 ## Where does the model end?
 
@@ -148,7 +149,7 @@ main agent had done the exploration, that work could have been amortized across
 the rest of the session. It would also have a better understanding of the
 bigger picture.
 
-![With subagents, files B and C are read again during a follow-up. Without subagents, their contents remain in the main agent's context and only file D needs to be read.](/img/thoughts-on-agent-harnesses/subagent-context.png)
+![With subagents, files B and C are read again during a follow-up. Without subagents, their contents remain in the main agent's context and only file D needs to be read.](/img/its-not-the-model-its-the-harness/subagent-context.png)
 
 I don't have numbers to prove that this is cheaper overall. But I can clearly
 see the difference in latency, and in some cases, the quality of the result. I
