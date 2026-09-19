@@ -1,8 +1,9 @@
 ---
-title: "Thoughts on agent harnesses"
-date: "2026-09-18"
+title: "It's not the model, it's the harness"
+date: "2026-09-19"
 tags: [ai, agents]
 toc: true
+audio: https://pub-9106c7dd622a4625b893684883c7dc2d.r2.dev/thoughts-on-agent-harnesses.mp3
 ---
 
 I've been using coding agents heavily for a while now. I've also had the
