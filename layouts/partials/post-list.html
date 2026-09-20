@@ -1,0 +1,41 @@
+{{ $items := slice }}
+{{ range where site.RegularPages "Section" "posts" }}
+  {{ $items = $items | append (dict
+    "title" .Title
+    "url" .RelPermalink
+    "dateSort" (.Date.Format "2006-01-02")
+    "dateDisplay" (.Date.Format "Jan 2, 2006")
+    "readTime" (printf "%d min read" .ReadingTime)
+    "external" false
+    "draft" .Draft) }}
+{{ end }}
+{{ range site.Data.external_posts.posts }}
+  {{ $date := time .date }}
+  {{ $items = $items | append (dict
+    "title" .title
+    "url" .url
+    "dateSort" ($date.Format "2006-01-02")
+    "dateDisplay" ($date.Format "Jan 2, 2006")
+    "readTime" .readTime
+    "external" true
+    "draft" false) }}
+{{ end }}
+{{ $items = sort $items "dateSort" "desc" }}
+
+<ol class="post-list">
+  {{ range $index, $item := $items }}
+    <li class="post-list-item{{ if eq $index 0 }} post-list-latest{{ end }}">
+      <a href="{{ $item.url }}" class="post-link">
+        <div class="post-copy">
+          {{ if eq $index 0 }}<span class="latest-label">Latest entry</span>{{ end }}
+          <h3>
+            {{ $item.title }}{{ if $item.draft }} [DRAFT]{{ end }}
+            {{ if $item.external }}<span class="text-muted" aria-label="External post"> ↗</span>{{ end }}
+          </h3>
+          {{ with $item.readTime }}<span class="read-time">{{ . }}</span>{{ end }}
+        </div>
+        <time datetime="{{ $item.dateSort }}">{{ $item.dateDisplay }}</time>
+      </a>
+    </li>
+  {{ end }}
+</ol>

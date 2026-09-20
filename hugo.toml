@@ -1,0 +1,31 @@
+baseURL = "https://arjunmahishi.com"
+languageCode = "en-us"
+title = "Arjun Mahishi"
+enableRobotsTXT = true
+
+# Tags exist only as post metadata; no tag pages (same as before)
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Arjun Mahishi's personal website"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # markdown files contain raw HTML (e.g. the home bio)
+      unsafe = true
+  [markup.highlight]
+    # class-based highlighting, styled by static/css/syntax.css (gruvbox)
+    noClasses = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+# Serve the feed at /feed.xml instead of the default /index.xml
+[outputFormats.RSS]
+  mediaType = "application/rss+xml"
+  baseName = "feed"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML"]  # no per-section feeds; only /feed.xml

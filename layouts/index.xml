@@ -1,0 +1,39 @@
+{{- $items := slice -}}
+{{- range where site.RegularPages "Section" "posts" -}}
+  {{- $items = $items | append (dict
+      "sortKey" (.Date.Format "2006-01-02")
+      "title" .Title
+      "link" .Permalink
+      "date" .Date
+      "summary" .Summary) -}}
+{{- end -}}
+{{- range site.Data.external_posts.posts -}}
+  {{- $date := time .date -}}
+  {{- $items = $items | append (dict
+      "sortKey" ($date.Format "2006-01-02")
+      "title" .title
+      "link" .url
+      "date" $date
+      "summary" .title) -}}
+{{- end -}}
+{{- $items = sort $items "sortKey" "desc" -}}
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ .Site.Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ .Site.Params.description }}</description>
+    <language>en-us</language>
+    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    <atom:link href="{{ .Permalink }}feed.xml" rel="self" type="application/rss+xml" />
+    {{ range $items }}
+    <item>
+      <title>{{ .title }}</title>
+      <link>{{ .link }}</link>
+      <pubDate>{{ .date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <guid>{{ .link }}</guid>
+      <description>{{ .summary | html }}</description>
+    </item>
+    {{ end }}
+  </channel>
+</rss>

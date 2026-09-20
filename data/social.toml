@@ -1,0 +1,17 @@
+# Social links shown in the footer. Icons live in static/img/<type>.svg
+
+[[links]]
+  type = "linkedin"
+  url = "https://www.linkedin.com/in/arjun-mahishi-b18968126/"
+
+[[links]]
+  type = "twitter"
+  url = "https://twitter.com/arjunmahishi"
+
+[[links]]
+  type = "github"
+  url = "https://github.com/arjunmahishi"
+
+[[links]]
+  type = "youtube"
+  url = "https://www.youtube.com/@arjunmahishi.mp3"

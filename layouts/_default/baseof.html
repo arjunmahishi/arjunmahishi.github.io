@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {{ $title := "Arjun Mahishi" }}
+    {{ if ne .Kind "home" }}{{ $title = printf "%s | Arjun Mahishi" .Title }}{{ end }}
+    <title>{{ $title }}</title>
+    <link rel="icon" type="image/webp" href="/img/dp.webp" />
+    <link rel="alternate" type="application/rss+xml" title="Arjun Mahishi" href="/feed.xml" />
+
+    <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+    <meta property="og:title" content="{{ if eq .Kind "home" }}Arjun Mahishi{{ else }}{{ .Title }}{{ end }}" />
+    <meta property="og:description" content="{{ with .Params.description }}{{ . }}{{ end }}" />
+    {{ $image := "/img/dp.webp" }}{{ with .Params.image }}{{ $image = . }}{{ end }}
+    <meta property="og:image" content="{{ $image | absURL }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:type" content="blog" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@arjunmahishi" />
+    <meta name="twitter:creator" content="@arjunmahishi" />
+    <meta name="twitter:title" content="{{ if eq .Kind "home" }}Arjun Mahishi{{ else }}{{ .Title }}{{ end }}" />
+    <meta name="twitter:description" content="{{ with .Params.description }}{{ . }}{{ end }}" />
+    <meta name="twitter:image" content="{{ $image | absURL }}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Tiro+Kannada&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <a href="#main-content" class="skip-link">Skip to content</a>
+      {{ block "main" . }}{{ end }}
+      {{ partial "footer" . }}
+    </div>
+  </body>
+</html>

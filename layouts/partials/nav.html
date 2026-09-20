@@ -1,0 +1,23 @@
+{{ $isHome := eq .Kind "home" }}
+<header class="container-main site-header{{ if $isHome }} site-header-home{{ end }}">
+  {{ if $isHome }}
+    <h1><a href="/" class="site-name" lang="kn">ಅರ್ಜುನ್ ಮಹಿಷಿ</a></h1>
+  {{ else }}
+    <a href="/" class="site-name" lang="kn">ಅರ್ಜುನ್ ಮಹಿಷಿ</a>
+  {{ end }}
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="/#writing"{{ if $isHome }} aria-current="location"{{ end }}>Writing</a></li>
+      <li><a href="/tabs/"{{ if hasPrefix .RelPermalink "/tabs" }} aria-current="location"{{ end }}>Guitar Tabs</a></li>
+      <li><a href="/maps/"{{ if hasPrefix .RelPermalink "/maps" }} aria-current="location"{{ end }}>Maps</a></li>
+    </ul>
+  </nav>
+  {{ if $isHome }}
+    <img
+      src="/img/dp.webp"
+      alt="Illustrated portrait of Arjun Mahishi at his laptop"
+      width="180"
+      height="150"
+      class="home-portrait" />
+  {{ end }}
+</header>

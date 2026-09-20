@@ -1,0 +1,15 @@
+{{ $dest := .Destination }}
+{{ $gallery := findRESubmatch `^/img/\{([^}]+)\}$` $dest 1 }}
+{{ if $gallery }}
+  {{/* gallery syntax: /img/{a.jpg,b.jpg} renders a horizontal scroller */}}
+  <div class="flex" style="overflow-x: auto; height: 17rem; gap: 1rem; justify-content: space-around;">
+    {{ range split (index $gallery 0 1) "," }}
+      <img
+        src="/img/{{ . | safeURL }}"
+        alt="{{ $.PlainText }}"
+        style="border-radius: 10px; margin-top: 0; margin-bottom: 0;" />
+    {{ end }}
+  </div>
+{{ else }}
+  <img src="{{ $dest | safeURL }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }} />
+{{ end }}

@@ -1,0 +1,15 @@
+{{ define "main" }}
+  {{ partial "nav" . }}
+
+  <main id="main-content" class="container-main page-content" tabIndex="-1">
+    <div class="page-heading">
+      <h1 class="page-title">Maps</h1>
+    </div>
+    <div id="map-holder" class="map-frame">
+      <iframe
+        title="Arjun's map"
+        src="https://www.google.com/maps/d/embed?mid=1Gm7xu7Q9hJXPW7yO82KXDHkqPwIBggo&ehbc=2E312F&noprof=1"
+        allowfullscreen />
+    </div>
+  </main>
+{{ end }}

@@ -1,0 +1,38 @@
+{{ $src := . }}
+<div class="my-6 border border-rule rounded-lg px-3 py-2" data-audio-player>
+  <audio src="{{ $src }}" preload="metadata"></audio>
+
+  <div class="text-xs text-muted mb-1.5">Listen to this post</div>
+
+  <div class="flex items-center gap-3">
+    <button
+      type="button"
+      class="audio-toggle flex items-center justify-center w-8 h-8 text-accent hover:opacity-70 transition-opacity shrink-0"
+      aria-label="Play">
+      <svg class="icon-pause hidden" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <rect x="3" y="2" width="4" height="12" rx="1" />
+        <rect x="9" y="2" width="4" height="12" rx="1" />
+      </svg>
+      <svg class="icon-play" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <polygon points="5,1 15,8 5,15" />
+      </svg>
+    </button>
+
+    <span class="text-xs text-muted tabular-nums shrink-0 w-[50px]" data-audio-current>0:00</span>
+
+    <div class="audio-slider flex-1 h-1 bg-rule rounded-full cursor-pointer relative">
+      <div class="h-full bg-accent rounded-full absolute top-0 left-0" data-audio-progress style="width: 0%"></div>
+    </div>
+
+    <span class="text-xs text-muted tabular-nums shrink-0 w-[50px] text-right" data-audio-duration>0:00</span>
+
+    <select class="audio-speed text-xs bg-transparent text-muted cursor-pointer appearance-none shrink-0" aria-label="Playback speed">
+      <option value="0.75">0.75x</option>
+      <option value="1" selected>1x</option>
+      <option value="1.25">1.25x</option>
+      <option value="1.5">1.5x</option>
+      <option value="1.75">1.75x</option>
+      <option value="2">2x</option>
+    </select>
+  </div>
+</div>

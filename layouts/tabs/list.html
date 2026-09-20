@@ -1,0 +1,21 @@
+{{ define "main" }}
+  {{ partial "nav" . }}
+
+  <main id="main-content" class="container-main page-content" tabIndex="-1">
+    <div class="page-heading">
+      <h1 class="page-title">{{ .Title }}</h1>
+      {{ with .Params.description }}<p class="page-description">{{ . }}</p>{{ end }}
+    </div>
+
+    <ul class="post-list listing">
+      {{ range .Pages }}
+        <li class="post-list-item">
+          <a href="{{ .RelPermalink }}" class="post-link">
+            <h2>{{ .Title }}{{ if .Draft }} [DRAFT]{{ end }}</h2>
+            {{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>{{ end }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </main>
+{{ end }}

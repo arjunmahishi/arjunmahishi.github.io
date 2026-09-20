@@ -1,0 +1,10 @@
+<ol class="toc-level toc-level-{{ .level }}">
+  {{ range .headings }}
+    <li>
+      <a href="#{{ .ID }}">{{ .Title }}</a>
+      {{ with .Headings }}
+        {{ partial "toc-level.html" (dict "headings" . "level" (add $.level 1)) }}
+      {{ end }}
+    </li>
+  {{ end }}
+</ol>

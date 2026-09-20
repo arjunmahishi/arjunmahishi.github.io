@@ -1,0 +1,35 @@
+{{ partial "nav" . }}
+
+<main id="main-content" class="container-main page-content" tabIndex="-1">
+  <header class="{{ if .Params.hideTitle }}sr-only{{ else }}page-heading{{ end }}">
+    <h1 class="page-title">{{ .Title }}</h1>
+  </header>
+
+  <article class="prose mb-8">{{ .Content }}</article>
+
+  {{ with .Params.videoUrl }}
+    {{ $src := replaceRE `^.*?youtube\.com/watch\?v=([^&]+).*$` `https://www.youtube.com/embed/$1` . }}
+    {{ $src = replaceRE `^.*?youtu\.be/([^&]+).*$` `https://www.youtube.com/embed/$1` $src }}
+    <div class="mb-8">
+      <div class="relative w-full" style="padding-bottom: 56.25%;">
+        <iframe
+          class="absolute top-0 left-0 w-full h-full rounded-lg"
+          src="{{ $src }}"
+          title="{{ $.Title }}"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen />
+      </div>
+    </div>
+  {{ end }}
+
+  {{ with .Params.svgPaths }}
+    <div class="sheet-music mb-8 space-y-4">
+      {{ range $index, $svgPath := . }}
+        <img
+          src="{{ $svgPath }}"
+          alt="{{ $.Title }} - Page {{ add $index 1 }}"
+          class="w-full" />
+      {{ end }}
+    </div>
+  {{ end }}
+</main>
