@@ -141,7 +141,7 @@ The **need** to even return an empty interface exposes a design flaw in the code
 
 See what [Rob Pike](https://en.wikipedia.org/wiki/Rob_Pike) has to say about it (the video will start from a specific time, but watch the whole video when you get a chance):
 
-{{< youtube id="PAAkCSZUG1c" start=455 >}}
+{{< youtube id=PAAkCSZUG1c start=455 >}}
 <br>
 
 So, return a concrete type unless it's absolutely necessary to return an interface. In the above case, what could possibly be the reason to use an empty `interface{}`? `impl1` and `impl2` might return different types? Then, in that case, they shouldn't really conform to the same interface. There is almost always a way to **not** use an empty `interface{}`

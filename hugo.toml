@@ -19,7 +19,7 @@ disableKinds = ["taxonomy", "term"]
     noClasses = false
   [markup.tableOfContents]
     startLevel = 2
-    endLevel = 3
+    endLevel = 5
 
 # Serve the feed at /feed.xml instead of the default /index.xml
 [outputFormats.RSS]

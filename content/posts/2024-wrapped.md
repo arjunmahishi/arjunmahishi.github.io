@@ -41,7 +41,7 @@ In the beginning, it was very hard. My endurance really sucked. I hated
 running. But eventually, I got a hang of it and started to enjoy it. So far
 this year, I've run almost 300Km. I even took part in my first 10k run.
 
-![medal](/img/{2024-wrapped/medal.jpg})
+![medal](/img/2024-wrapped/medal.jpg)
 
 From the past few weeks, I've also started to do some strength training. Over
 the course of this year, I was able to drop around 10Kg of weight. And more
@@ -52,16 +52,20 @@ fitness requirement for most of the Himalayan trek organised by [IndiaHikes](htt
 
 ## Travel
 
-#### Kashmir
+### Kashmir
 
 I went to Kashmir with my family in March. The timing was perfect. It was the
 beginning of spring and still got to see snow. This was my first time seeing
 snow. The highlight of this trip for me was the stay in Gulmarg and the hike to
 the Thajiwas Glacier in Sonmarg.
 
-![kashmir](/img/{2024-wrapped/kashmir-3.jpg,2024-wrapped/kashmir-1.jpg,2024-wrapped/kashmir-2.jpg})
+{{< gallery >}}
+![kashmir](/img/2024-wrapped/kashmir-3.jpg)
+![kashmir](/img/2024-wrapped/kashmir-1.jpg)
+![kashmir](/img/2024-wrapped/kashmir-2.jpg)
+{{< /gallery >}}
 
-#### Canada
+### Canada
 
 Got to go to Canada for the company's RnD offsite. The offsite was for 3 day in
 Toronto. For the 3 days, there was enough to do in Toronto apart from the
@@ -73,7 +77,12 @@ The company put us up in the [Four Seasons Hotel](https://www.fourseasons.com/to
 The hotel was just amazing. The food was great, the view from my room was
 great. I really enjoyed my stay there.
 
-![toronto](/img/{2024-wrapped/toronto-1.jpg,2024-wrapped/toronto-2.jpg,2024-wrapped/toronto-3.jpg,2024-wrapped/toronto-4.jpg})
+{{< gallery >}}
+![toronto](/img/2024-wrapped/toronto-1.jpg)
+![toronto](/img/2024-wrapped/toronto-2.jpg)
+![toronto](/img/2024-wrapped/toronto-3.jpg)
+![toronto](/img/2024-wrapped/toronto-4.jpg)
+{{< /gallery >}}
 
 After the offsite, a few of us took a couple of days off and went to Banff in
 Alberta. This was the highlight of the trip. The place is just so beautiful. We
@@ -81,7 +90,12 @@ went to some of the blue lakes, hiked a bit, and mostly just walked around the
 town. The hostel we stayed in was 5min away from the bow river. The views were
 spectacular from every corner of the town.
 
-![banff](/img/{2024-wrapped/banff-1.jpg,2024-wrapped/banff-2.jpg,2024-wrapped/banff-3.jpg,2024-wrapped/banff-4.jpg})
+{{< gallery >}}
+![banff](/img/2024-wrapped/banff-1.jpg)
+![banff](/img/2024-wrapped/banff-2.jpg)
+![banff](/img/2024-wrapped/banff-3.jpg)
+![banff](/img/2024-wrapped/banff-4.jpg)
+{{< /gallery >}}
 
 ## Hiking
 

@@ -26,4 +26,4 @@ posts and external posts (`data/external_posts.toml`).
 - `content/posts/` - blog posts (markdown, frontmatter: title, date, tags, toc, image, audio, draft)
 - `content/tabs/` - guitar tabs
 - `data/external_posts.toml` - posts published elsewhere, shown in the writing list and the feed
-- Gallery syntax in markdown: `![alt](/img/{a.jpg,b.jpg})` renders a horizontal scroller
+- Gallery shortcode: wrap normal Markdown images in `{{< gallery >}}` and `{{< /gallery >}}` to render a masonry-style gallery

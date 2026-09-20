@@ -14,7 +14,7 @@
 
   {{ with .Params.audio }}
     {{ partial "audio-player" . }}
-    <script src="/js/audio-player.js" defer></script>
+    <script src="{{ "js/audio-player.js" | relURL }}" defer></script>
   {{ end }}
 
   {{ with .Params.image }}
@@ -23,11 +23,7 @@
 
   <article class="prose">
     {{ if .Params.toc }}
-      <div class="toc">
-        {{ with .Fragments.Headings }}
-          {{ partial "toc-level.html" (dict "headings" . "level" 1) }}
-        {{ end }}
-      </div>
+      {{ .TableOfContents }}
     {{ end }}
     {{ .Content }}
   </article>

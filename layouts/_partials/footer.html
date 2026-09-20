@@ -3,7 +3,7 @@
   <ul aria-label="Social links">
     <li>{{ partial "rss-link" . }}</li>
     {{ range site.Data.social.links }}
-      <li><a class="flex" href="{{ .url }}"><img src="/img/{{ .type }}.svg" alt="{{ .type }}" width="20" height="20" /></a></li>
+      <li><a class="flex" href="{{ .url }}"><img src="{{ printf "img/%s.svg" .type | relURL }}" alt="{{ .type }}" width="20" height="20" /></a></li>
     {{ end }}
   </ul>
 </footer>
