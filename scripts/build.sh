@@ -42,7 +42,9 @@ fi
 CACHE_DIR="$PWD/.tools/hugo-cache"
 
 if [ "${1:-}" = "serve" ]; then
-  .tools/tailwindcss -c tailwind.config.js -i assets/css/main.css -o static/css/main.css --watch &
+  .tools/tailwindcss -c tailwind.config.js -i assets/css/main.css -o static/css/main.css
+  # Background commands have closed stdin; keep the watcher alive anyway.
+  .tools/tailwindcss -c tailwind.config.js -i assets/css/main.css -o static/css/main.css --watch=always &
   TW_PID=$!
   trap 'kill $TW_PID 2>/dev/null || true' EXIT
   .tools/hugo server -D --renderToMemory --cacheDir "$CACHE_DIR"
