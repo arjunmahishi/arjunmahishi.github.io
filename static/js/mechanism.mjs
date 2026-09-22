@@ -25,7 +25,7 @@ function mountMechanism(svg) {
     const path = svg.querySelector(`#marble-${name}`);
     routes[name] = { path, length: path.getTotalLength() };
   }
-  const motionAllowed = window.matchMedia("(prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine)");
+  const motionAllowed = window.matchMedia("(prefers-reduced-motion: no-preference)");
   let phase = 0;
   let speed = idleSpeed;
   let target = idleSpeed;
