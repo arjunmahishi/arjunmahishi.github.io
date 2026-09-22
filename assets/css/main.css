@@ -8,10 +8,10 @@
     --paper: #101318;
     --ink: #dedfe3;
     --muted: #939ba8;
-    --accent: #ff4fbc;
+    --accent: #00f5b0;
     --rule: #303641;
     --surface: #1d232d;
-    --link: #94b9ed;
+    --link: var(--accent);
     --signature: var(--ink);
   }
 
@@ -279,8 +279,8 @@
   --tw-prose-quote-borders: var(--rule);
   --tw-prose-captions: var(--muted);
   --tw-prose-code: var(--ink);
-  --tw-prose-pre-code: #ebdbb2;
-  --tw-prose-pre-bg: #1d2021;
+  --tw-prose-pre-code: var(--ink);
+  --tw-prose-pre-bg: var(--surface);
   --tw-prose-th-borders: var(--rule);
   --tw-prose-td-borders: var(--rule);
   max-width: none;

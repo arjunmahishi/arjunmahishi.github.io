@@ -15,8 +15,8 @@ disableKinds = ["taxonomy", "term"]
       # markdown files contain raw HTML (e.g. the home bio)
       unsafe = true
   [markup.highlight]
-    # class-based highlighting, styled by static/css/syntax.css (gruvbox)
-    noClasses = false
+    noClasses = true
+    style = "nord"
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 5
