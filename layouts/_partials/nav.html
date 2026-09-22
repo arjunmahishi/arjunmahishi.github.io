@@ -2,6 +2,7 @@
 {{ $isPost := eq .Type "posts" }}
 <header class="container-main site-header{{ if $isHome }} site-header-home{{ end }}">
   {{ if $isHome }}
+    <div class="home-identity">
     <h1><a href="{{ "" | relURL }}" class="site-name" lang="kn">ಅರ್ಜುನ್ ಮಹಿಷಿ</a></h1>
   {{ else }}
     <a href="{{ "" | relURL }}" class="site-name" lang="kn">ಅರ್ಜುನ್ ಮಹಿಷಿ</a>
@@ -14,11 +15,10 @@
     </ul>
   </nav>
   {{ if $isHome }}
-    <img
-      src="{{ "img/dp.webp" | relURL }}"
-      alt="Illustrated portrait of Arjun Mahishi at his laptop"
-      width="180"
-      height="150"
-      class="home-portrait" />
+    </div>
+    <div class="home-portrait" aria-hidden="true">
+      {{ os.ReadFile "static/img/signal-core.svg" | safeHTML }}
+    </div>
+    <script type="module" src="{{ "js/mechanism.mjs" | relURL }}"></script>
   {{ end }}
 </header>
