@@ -16,9 +16,5 @@
   </nav>
   {{ if $isHome }}
     </div>
-    <div class="home-portrait" aria-hidden="true">
-      {{ os.ReadFile "static/img/signal-core.svg" | safeHTML }}
-    </div>
-    <script type="module" src="{{ "js/mechanism.mjs" | relURL }}"></script>
   {{ end }}
 </header>

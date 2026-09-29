@@ -94,24 +94,14 @@
 }
 
 .home-identity {
-  grid-area: 1 / 1;
   justify-self: center;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 52%;
 }
 
 .site-header-home .site-name {
   font-size: clamp(2.25rem, 5vw, 3.5rem);
-}
-
-.home-portrait {
-  grid-area: 1 / 1;
-  width: 100%;
-  min-width: 0;
-  pointer-events: none;
 }
 
 .site-header-home nav ul {
@@ -392,13 +382,7 @@
   }
 
   .home-identity {
-    max-width: 100%;
     gap: 16px;
-  }
-
-  .home-portrait {
-    order: -1;
-    max-width: 540px;
   }
 }
 

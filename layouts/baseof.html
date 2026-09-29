@@ -9,7 +9,6 @@
     {{ $description := .Site.Params.description }}
     {{ with .Summary }}{{ $description = . | plainify | truncate 160 }}{{ end }}
     {{ with .Description }}{{ $description = . }}{{ end }}
-    <link rel="icon" type="image/webp" href="{{ "img/dp.webp" | relURL }}" />
     <link rel="alternate" type="application/rss+xml" title="Arjun Mahishi" href="{{ "feed.xml" | relURL }}" />
     <link rel="canonical" href="{{ .Permalink }}" />
 
