@@ -1,7 +1,7 @@
 ---
 title: "Prettify JSON in Vim"
 date: "2021-10-10"
-tags: [ vim ]
+tags: [ vim, tech ]
 ---
 
 ### TL;DR

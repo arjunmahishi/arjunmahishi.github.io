@@ -1,7 +1,7 @@
 ---
 title: "Test-driven development with Golang"
 date: "2018-07-31"
-tags: [ golang, good-practices  ]
+tags: [ golang, good-practices, tech ]
 ---
 
 Testing — An activity hated by most human beings

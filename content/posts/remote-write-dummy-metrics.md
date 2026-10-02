@@ -1,6 +1,7 @@
 ---
 title: "Remote Write Dummy Metrics"
 date: "2022-08-31"
+tags: [tech]
 ---
 
 While working on any system built on top of prometheus based storage, you might

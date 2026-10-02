@@ -1,7 +1,7 @@
 ---
 title: "Automating Neural DSP Tone Generation with LLMs"
 date: "2026-04-18"
-tags: [ neural-dsp, ai, automation, cli, workflow ]
+tags: [ neural-dsp, ai, automation, cli, workflow, tech ]
 draft: true
 ---
 

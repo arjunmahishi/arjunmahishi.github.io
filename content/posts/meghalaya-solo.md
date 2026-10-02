@@ -2,7 +2,7 @@
 title: "Meghalaya on a scooter"
 date: "2023-09-17"
 toc: true
-tags: [travel, personal]
+tags: [travel, life]
 image: "https://i.imgur.com/Sj5HNTd.jpg"
 ---
 

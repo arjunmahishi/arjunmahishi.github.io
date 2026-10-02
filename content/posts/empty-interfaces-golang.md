@@ -1,7 +1,7 @@
 ---
 title: "Returning empty interfaces in Golang"
 date: "2022-01-08"
-tags: [golang, good-practices]
+tags: [golang, good-practices, tech]
 image: "https://i.imgur.com/qX0N1Bg.png"
 ---
 

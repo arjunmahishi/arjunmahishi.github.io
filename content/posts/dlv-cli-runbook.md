@@ -1,7 +1,7 @@
 ---
 title: "Debugging like a savage with Delve CLI"
 date: "2024-09-01"
-tags: [cli, debugging, golang]
+tags: [cli, debugging, golang, tech]
 image: "https://i.imgur.com/CUkXvDf.png"
 toc: true
 draft: true

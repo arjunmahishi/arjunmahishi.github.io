@@ -1,7 +1,7 @@
 ---
 title: "Tapping into the system clipboard"
 date: "2021-07-11"
-tags: [ vim ]
+tags: [ vim, tech ]
 ---
 
 ### TL;DR

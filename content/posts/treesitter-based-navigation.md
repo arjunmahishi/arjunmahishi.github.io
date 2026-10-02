@@ -1,7 +1,7 @@
 ---
 title: "Treesitter APIs for code navigation"
 date: "2024-10-31"
-tags: [ vim, nvim, treesitter ]
+tags: [ vim, nvim, treesitter, tech ]
 draft: true
 ---
 

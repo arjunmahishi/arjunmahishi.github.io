@@ -1,7 +1,7 @@
 ---
 title: "PromQL over offline metric dumps"
 date: "2026-07-26"
-tags: [golang, observability, promql]
+tags: [golang, observability, promql, tech]
 toc: true
 image: /img/promql-over-offline-metric-dumps/hero.png
 audio: https://pub-9106c7dd622a4625b893684883c7dc2d.r2.dev/promql-over-offline-metric-dumps.mp3

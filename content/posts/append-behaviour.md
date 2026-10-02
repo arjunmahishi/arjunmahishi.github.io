@@ -1,7 +1,7 @@
 ---
 title: "append: to copy or not to copy"
 date: "2025-02-04"
-tags: [ golang ]
+tags: [ golang, tech ]
 ---
 
 ## Part 1

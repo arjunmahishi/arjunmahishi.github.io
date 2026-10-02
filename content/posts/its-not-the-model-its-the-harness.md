@@ -1,7 +1,7 @@
 ---
 title: "It's not the model, it's the harness"
 date: "2026-09-19"
-tags: [ai, agents]
+tags: [ai, agents, tech]
 toc: true
 image: /img/its-not-the-model-its-the-harness/hero.png
 audio: https://pub-9106c7dd622a4625b893684883c7dc2d.r2.dev/its-not-the-model-its-the-harness.mp3

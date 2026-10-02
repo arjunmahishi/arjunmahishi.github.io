@@ -1,7 +1,7 @@
 ---
 title: "2024 wrapped"
 date: "2024-12-31"
-tags: [personal]
+tags: [life]
 toc: true
 ---
 

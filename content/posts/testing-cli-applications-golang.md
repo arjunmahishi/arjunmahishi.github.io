@@ -1,6 +1,7 @@
 ---
 title: "Testing CLI Applications Golang"
 date: "2022-06-04"
+tags: [tech]
 draft: true
 ---
 
