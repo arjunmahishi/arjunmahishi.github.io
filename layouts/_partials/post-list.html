@@ -1,15 +1,36 @@
+{{ $primaryCategories := slice "tech" "life" }}
 {{ $items := slice }}
 {{ range where site.RegularPages "Section" "posts" }}
+  {{ $categories := slice }}
+  {{ range .Params.tags }}
+    {{ if in $primaryCategories . }}
+      {{ $categories = $categories | append . }}
+    {{ end }}
+  {{ end }}
+  {{ if ne (len $categories) 1 }}
+    {{ errorf "Post %q must have exactly one primary category tag (tech or life)" .Title }}
+  {{ end }}
   {{ $items = $items | append (dict
     "title" .Title
     "url" .RelPermalink
     "dateSort" (.Date.Format "2006-01-02")
     "dateDisplay" (.Date.Format "Jan 2, 2006")
     "readTime" (printf "%d min read" .ReadingTime)
+    "tags" .Params.tags
+    "category" (index $categories 0)
     "external" false
     "draft" .Draft) }}
 {{ end }}
 {{ range site.Data.external_posts.posts }}
+  {{ $categories := slice }}
+  {{ range .tags }}
+    {{ if in $primaryCategories . }}
+      {{ $categories = $categories | append . }}
+    {{ end }}
+  {{ end }}
+  {{ if ne (len $categories) 1 }}
+    {{ errorf "External post %q must have exactly one primary category tag (tech or life)" .title }}
+  {{ end }}
   {{ $date := time .date }}
   {{ $items = $items | append (dict
     "title" .title
@@ -17,14 +38,97 @@
     "dateSort" ($date.Format "2006-01-02")
     "dateDisplay" ($date.Format "Jan 2, 2006")
     "readTime" .readTime
+    "tags" .tags
+    "category" (index $categories 0)
     "external" true
     "draft" false) }}
 {{ end }}
 {{ $items = sort $items "dateSort" "desc" }}
 
-<ol class="post-list">
+{{ $allTags := slice }}
+{{ $tagCounts := newScratch }}
+{{ range $items }}
+  {{ $category := .category }}
+  {{ $seenTags := slice }}
+  {{ range .tags }}
+    {{ if not (in $seenTags .) }}
+      {{ if not (in $allTags .) }}
+        {{ $allTags = $allTags | append . }}
+      {{ end }}
+      {{ $seenTags = $seenTags | append . }}
+      {{ $tagCounts.Add (printf "all:%s" .) 1 }}
+      {{ $tagCounts.Add (printf "%s:%s" $category .) 1 }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $allTags = sort $allTags }}
+
+<section class="post-filters" data-post-filters aria-label="Filter writing" hidden>
+  <div class="post-filter-row">
+    <span class="post-filter-label" id="category-filter-label">Category</span>
+    <div class="post-filter-options" role="group" aria-labelledby="category-filter-label">
+      {{ range $category := slice "all" "tech" "life" }}
+        <button
+          type="button"
+          class="post-filter-button"
+          data-category-filter="{{ $category }}"
+          aria-pressed="{{ if eq $category "all" }}true{{ else }}false{{ end }}"
+        >{{ title $category }}</button>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="post-filter-row">
+    <span class="post-filter-label" id="topic-filter-label">Topic</span>
+    <div class="post-topic-groups" aria-labelledby="topic-filter-label">
+      {{ range $category := slice "all" "tech" "life" }}
+        <div
+          class="post-filter-options"
+          data-topic-group="{{ $category }}"
+          role="group"
+          aria-label="{{ title $category }} topics"
+          {{ if ne $category "all" }}hidden{{ end }}
+        >
+          <button
+            type="button"
+            class="post-filter-button"
+            data-topic-filter="all"
+            aria-pressed="true"
+          >All</button>
+          {{ range $tag := $allTags }}
+            {{ if not (in $primaryCategories $tag) }}
+              {{ $count := $tagCounts.Get (printf "%s:%s" $category $tag) | default 0 }}
+              {{ if ge $count 2 }}
+                {{ $techCount := $tagCounts.Get (printf "tech:%s" $tag) | default 0 }}
+                {{ $lifeCount := $tagCounts.Get (printf "life:%s" $tag) | default 0 }}
+                {{ $categoryTarget := "" }}
+                {{ if and (gt $techCount 0) (eq $lifeCount 0) }}{{ $categoryTarget = "tech" }}{{ end }}
+                {{ if and (gt $lifeCount 0) (eq $techCount 0) }}{{ $categoryTarget = "life" }}{{ end }}
+                <button
+                  type="button"
+                  class="post-filter-button"
+                  data-topic-filter="{{ $tag }}"
+                  {{ if ne $categoryTarget "" }}data-category-target="{{ $categoryTarget }}"{{ end }}
+                  aria-pressed="false"
+                >{{ $tag }} <span class="post-filter-count">({{ $count }})</span></button>
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+  <p class="sr-only" data-filter-status aria-live="polite"></p>
+</section>
+
+<ol class="post-list" data-post-list>
   {{ range $index, $item := $items }}
-    <li class="post-list-item{{ if eq $index 0 }} post-list-latest{{ end }}">
+    <li
+      class="post-list-item{{ if eq $index 0 }} post-list-latest{{ end }}"
+      data-post-item
+      data-category="{{ $item.category }}"
+      data-tags="{{ delimit $item.tags " " }}"
+    >
       <a href="{{ $item.url }}" class="post-link">
         <div class="post-copy">
           {{ if eq $index 0 }}<span class="latest-label">Latest entry</span>{{ end }}
@@ -33,6 +137,11 @@
             {{ if $item.external }}<span class="text-muted" aria-label="External post"> ↗</span>{{ end }}
           </h3>
           {{ with $item.readTime }}<span class="read-time">{{ . }}</span>{{ end }}
+          <div class="post-tags" aria-label="Tags">
+            {{ range $tag := $item.tags }}
+              <span class="post-tag">{{ $tag }}</span>
+            {{ end }}
+          </div>
         </div>
         <time datetime="{{ $item.dateSort }}">{{ $item.dateDisplay }}</time>
       </a>
