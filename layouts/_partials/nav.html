@@ -12,6 +12,7 @@
       <li><a href="{{ "" | relURL }}#writing"{{ if or $isHome $isPost }} aria-current="location"{{ end }}>Writing</a></li>
       <li><a href="{{ "tabs/" | relURL }}"{{ if hasPrefix .RelPermalink "/tabs" }} aria-current="location"{{ end }}>Guitar Tabs</a></li>
       <li><a href="{{ "maps/" | relURL }}"{{ if hasPrefix .RelPermalink "/maps" }} aria-current="location"{{ end }}>Maps</a></li>
+      <li><a href="{{ "resume.pdf" | relURL }}">Resume</a></li>
     </ul>
   </nav>
   {{ if $isHome }}
